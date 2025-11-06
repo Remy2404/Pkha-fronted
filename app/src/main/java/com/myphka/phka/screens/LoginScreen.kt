@@ -32,12 +32,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -65,15 +65,14 @@ fun LoginScreen(navController: NavController) {
                 .size(64.dp)
                 .background(
                     Color(0xFFE0C9D6),
-                    shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
+                    shape = androidx.compose.foundation.shape.RoundedCornerShape(24.dp)
                 ),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = "Phka",
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color(0xFFEC1380)
+            Image(
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "Phka Logo",
+                modifier = Modifier.size(64.dp).clip(RoundedCornerShape(12.dp)),
             )
         }
 
@@ -136,7 +135,7 @@ fun LoginScreen(navController: NavController) {
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End
+                horizontalArrangement = Arrangement.End
             ) {
                 TextButton(onClick = { navController.navigate("forgot_password") }) {
                     Text(
@@ -179,7 +178,7 @@ fun LoginScreen(navController: NavController) {
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Button(
                     onClick = { },
@@ -231,7 +230,7 @@ fun LoginScreen(navController: NavController) {
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.Center,
+                horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(

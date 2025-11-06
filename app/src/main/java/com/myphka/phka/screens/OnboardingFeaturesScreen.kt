@@ -29,6 +29,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -112,8 +113,8 @@ fun OnboardingFeaturesScreen(navController: NavController) {
             onClick = { navController.navigate("login") },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp)
-                .padding(16.dp),
+                .padding(16.dp)
+                .height(56.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFFEC1380)
             )
@@ -182,4 +183,10 @@ fun FeatureCard(feature: Feature) {
             )
         }
     }
+}
+@Composable
+@Preview
+fun OnboardingFeaturesScreenPreview() {
+    val navController = androidx.navigation.compose.rememberNavController()
+    OnboardingFeaturesScreen(navController)
 }

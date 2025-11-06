@@ -33,9 +33,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.myphka.phka.ui.theme.DeepPink
 
 @Composable
 fun RegisterScreen(navController: NavController) {
@@ -204,22 +207,33 @@ fun RegisterScreen(navController: NavController) {
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.Center
+                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
                     text = "Already have an account? ",
                     fontSize = 12.sp,
-                    color = Color(0xFF1B0D14).copy(alpha = 0.7f)
+                    color = Color(0xFF1B0D14).copy(alpha = 0.7f),
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
                 )
-                TextButton(onClick = { navController.navigate("login") }) {
+                TextButton(
+                    onClick = { navController.navigate("login") },
+                    modifier = Modifier.padding(0.dp)
+                ) {
                     Text(
                         text = "Login",
                         fontSize = 12.sp,
-                        color = Color(0xFFEC1380),
-                        fontWeight = FontWeight.Medium
+                        color = DeepPink,
+                        fontWeight = FontWeight.Medium,
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center
                     )
                 }
             }
         }
     }
+}
+@Preview
+@Composable
+fun RegisterScreenPreview() {
+     RegisterScreen(navController = rememberNavController())
 }
