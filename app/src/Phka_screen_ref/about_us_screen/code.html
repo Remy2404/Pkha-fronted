@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
+<button class="flex size-10 items-center justify-center rounded-full text-zinc-900 dark:text-zinc-100">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold">About Us</h1>
+<div class="w-10"></div>
+</header>
+<main class="p-6 space-y-10">
+<section>
+<h2 class="text-2xl font-bold mb-4">About Phka</h2>
+<p class="text-zinc-700 dark:text-zinc-400 leading-relaxed">
+                        Phka is a beauty brand dedicated to enhancing your natural radiance with high-quality, sustainable products. Our journey began with a passion for clean beauty and a commitment to ethical practices. We believe in the power of nature and science to create effective, luxurious skincare and makeup that you can feel good about using.
+                    </p>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4">Our Story</h2>
+<p class="text-zinc-700 dark:text-zinc-400 leading-relaxed">
+                        Founded in 2020 by Anya Sharma, Phka was born out of a desire to create a beauty brand that aligns with modern values. Anya, a former chemist, envisioned a line of products that are not only effective but also environmentally conscious and cruelty-free. Inspired by her grandmother's traditional beauty remedies, Anya combined ancient wisdom with cutting-edge research to develop Phka's signature formulations.
+                    </p>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4">Mission &amp; Values</h2>
+<p class="text-zinc-700 dark:text-zinc-400 leading-relaxed">
+                        At Phka, our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet. We are committed to:
+                    </p>
+<ul class="list-disc list-inside mt-4 space-y-2 text-zinc-700 dark:text-zinc-400">
+<li>Sustainability: Using eco-friendly packaging and responsibly sourced ingredients.</li>
+<li>Transparency: Providing clear information about our products and practices.</li>
+<li>Inclusivity: Celebrating diversity and creating products for all skin types and tones.</li>
+<li>Quality: Ensuring our products meet the highest standards of efficacy and safety.</li>
+</ul>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4">Meet the Team</h2>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-full bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCaBwL04CU5tuvCGdVZPmwlk1qC0EjdYKFM4M2Qn3uR6vPPgQyNLXQqi6DjJ0Joh4rt_DudhK-E0tVl6krD6SW_PPdTgIVS8uwsiiUvbaRxshZ7xIjbSDAb7fxh2HwBcsF3Ht4Yi_2fGB24HE9h2ou7F8qZ3fvbT8BnftlptPmgEE1Oq7Fpq4PGuMAxrkRRxZ8PJ77qlLpmw2E_oG1HKyxlYepNF6G87-kjZKD1QmNekhDwqxlnePvrlxqohsQ82wzS31dMe-ScOFw");'></div>
+<div>
+<h3 class="font-bold">Anya Sharma</h3>
+<p class="text-sm text-primary">Founder &amp; CEO</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-full bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjWvxit0IqBwK7qbtk1k0Ph76ZRghSIP3ndPOQk8D8QBXfxV0uT_DPS6cCHyc3WAnFy7UGCW1oNkaC5Ec4_CpfSHO5dllrNHWPDs2RzeyLwGk7xk-7zf4LP0Ej4rDupfkctA22Rtc3FQsyDWW5qDPBfhScD2B5oESH1PzwTaMyhyWtthIfPJdIwxWSF6qIH5W9zKaAUXTfUX58kIXITwvCoIW3e3O7z59A5z-PckQVXd-gxytzGlBb4iAEgszaBEA2sn1KXc6o2Oo");'></div>
+<div>
+<h3 class="font-bold">Ethan Carter</h3>
+<p class="text-sm text-primary">Head of Product Development</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-full bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrpQKOvST5YZ87GYSOxScy-NzL3umxuIA4_BYncERnMp41r4eYRpFZdhxH0EWI8AKM9i0IKuKse3nb0Mp0JPu11WdjduF_Sa0zJ4v7RDUcX2z0uFNJ5EfOkS7bgI7QTvjxp44zO4EeCbUtrAzLSNJcrP_MOJ1Hp08A_BJ-TmZd3kakS2GLeNss4m59jxwOFN3XI9vnaJQHuDq2RwCDbsa9sEaJOT0tIlQbytspRKpg0TengoD6_0srZj7_WLQNammrMixRFKD25iI");'></div>
+<div>
+<h3 class="font-bold">Olivia Bennett</h3>
+<p class="text-sm text-primary">Marketing Director</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4">Contact Info</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg>
+</div>
+<p class="text-zinc-700 dark:text-zinc-400">Email: support@phka.com</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"></path></svg>
+</div>
+<p class="text-zinc-700 dark:text-zinc-400">Phone: (555) 123-4567</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path></svg>
+</div>
+<p class="text-zinc-700 dark:text-zinc-400">Address: 123 Beauty Lane, Cityville, CA 90210</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+<nav class="sticky bottom-0 z-10 flex border-t border-zinc-200 dark:border-zinc-800 bg-background-light dark:bg-background-dark pb-4 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+<p class="text-xs font-medium">Categories</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path></svg>
+<p class="text-xs font-medium">Cart</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<svg class="fill-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path></svg>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</div>
+
+</body></html>

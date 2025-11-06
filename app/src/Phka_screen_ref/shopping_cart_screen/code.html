@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec1380",
+              "background-light": "#f8f6f7",
+              "background-dark": "#221019",
+            },
+            fontFamily: {
+              display: ["Be Vietnam Pro"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .swipe-delete {
+        position: relative;
+        overflow: hidden;
+      }
+      .swipe-delete-button {
+        position: absolute;
+        top: 0;
+        right: -64px;width: 64px;
+        height: 100%;
+        transition: right 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .swipe-delete:hover .swipe-delete-button {
+        right: 0;}
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-full min-h-screen w-full flex-col">
+<header class="flex items-center justify-between p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-slate-800/50">
+<span class="material-symbols-outlined"> arrow_back_ios_new </span>
+</button>
+<h1 class="text-xl font-bold">My Cart</h1>
+<div class="w-10"></div>
+</header>
+<main class="flex-grow overflow-y-auto px-4">
+<div class="space-y-4">
+<div class="swipe-delete">
+<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-slate-800/50 p-4">
+<div class="h-20 w-20 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBeKo1Wk0oreknsZXqeljLoEy5yLpOtubYL5WTbAX27IAPbtjYSbRhLllumA_2FpIbM22HZYDrwJoeZEt45f9zh8R7RMJPLGS4YoOXrg9nOpf7Bd0D4aIPzF28WQA9Z59HEDoy02eTMl_bKV_8GsQEapO6E89P82KPgl-PrW2fv76RCmha7Whlu9P_ifJTsWTYcqVBhTLKnDRZpu6sxqCaMof0kAusMeyiW17CqeNFPmAoGObwuCIiBnjzc_vTC2BuoULLIlo6AZ5Q");'></div>
+<div class="flex-grow">
+<h3 class="font-bold">Rose Water Toner</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">100ml</p>
+<p class="mt-2 font-bold">$25.00</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-lg font-bold">-</button>
+<span class="w-4 text-center font-bold">1</span>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-lg font-bold">+</button>
+</div>
+</div>
+<button class="swipe-delete-button bg-primary text-white">
+<span class="material-symbols-outlined"> delete </span>
+</button>
+</div>
+<div class="swipe-delete">
+<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-slate-800/50 p-4">
+<div class="h-20 w-20 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA12j-1KFXmF09sLhPLbR1VFMldtwycUN_Wgd5A_fm60A9-eDTeB75tsOUr4rdj4tkRg5GNl4cmhn32wulKvni6SaFkZGXdtnvMV5FXPqhBFvI5oFrB04rM82FYvh6uthAUNuLFJKxxR4DZHnWUeqCw2uwUu_6qE-5Uw680eBIe_Z2Jx7OTB7LDUsG1MxEXqcuPUAeVDnM6VO8ZpxKFpzrBmHrVk0LvPhJjiGFGFoGstIEyt2MkiEq2GXBrUolFhNwXD75yQ0yTe0I");'></div>
+<div class="flex-grow">
+<h3 class="font-bold">Vitamin C Serum</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">50ml</p>
+<p class="mt-2 font-bold">$20.00</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-lg font-bold">-</button>
+<span class="w-4 text-center font-bold">2</span>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-lg font-bold">+</button>
+</div>
+</div>
+<button class="swipe-delete-button bg-primary text-white">
+<span class="material-symbols-outlined"> delete </span>
+</button>
+</div>
+</div>
+<div class="mt-8">
+<div class="relative">
+<input class="w-full rounded-lg border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4 pr-32 placeholder:text-slate-400 focus:border-primary focus:ring-primary" placeholder="Promo Code" type="text"/>
+<button class="absolute inset-y-0 right-0 m-2 rounded-lg bg-primary px-4 font-bold text-white">Apply</button>
+</div>
+</div>
+<div class="mt-8 space-y-2 rounded-lg bg-white dark:bg-slate-800/50 p-4">
+<div class="flex justify-between">
+<p class="text-slate-500 dark:text-slate-400">Subtotal</p>
+<p class="font-bold">$45.00</p>
+</div>
+<div class="flex justify-between">
+<p class="text-slate-500 dark:text-slate-400">Shipping</p>
+<p class="font-bold">Free</p>
+</div>
+<div class="flex justify-between border-t border-slate-200 dark:border-slate-700 pt-2">
+<p class="text-lg font-bold">Total</p>
+<p class="text-lg font-bold">$45.00</p>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/80 pb-safe-area-bottom backdrop-blur-lg dark:bg-background-dark/80">
+<div class="px-4 py-4">
+<button class="w-full rounded-xl bg-primary py-4 text-lg font-bold text-white">Checkout</button>
+</div>
+<nav class="flex justify-around border-t border-slate-200 dark:border-slate-700 py-2">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> home </span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> category </span>
+<span class="text-xs">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined"> shopping_bag </span>
+<span class="text-xs font-bold">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined"> person </span>
+<span class="text-xs">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

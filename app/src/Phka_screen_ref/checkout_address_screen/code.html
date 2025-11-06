@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark sticky top-0 z-10 border-b border-primary/10 dark:border-primary/20">
+<button class="text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-background-dark dark:text-background-light absolute left-1/2 -translate-x-1/2">Shipping</h1>
+</header>
+<main class="flex-grow p-4 space-y-4">
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="fullName">Full Name</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="fullName" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="address1">Address Line 1</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="address1" placeholder="Street address, P.O. box" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="address2">Address Line 2 (Optional)</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="address2" placeholder="Apartment, suite, unit, etc." type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="city">City</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="city" placeholder="Enter city" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="state">State</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="state" placeholder="Enter state" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="zip">ZIP Code</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="zip" placeholder="Enter ZIP" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-background-dark/70 dark:text-background-light/70" for="country">Country</label>
+<input class="form-input w-full rounded-lg border-none bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary h-14 px-4" id="country" placeholder="Select country" type="text"/>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark">
+<div class="p-4">
+<button class="w-full h-14 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">Continue</button>
+</div>
+<nav class="flex justify-around p-2 border-t border-primary/10 dark:border-primary/20">
+<a class="flex flex-col items-center gap-1 text-background-dark/50 dark:text-background-light/50" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-background-dark/50 dark:text-background-light/50" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs font-bold">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-background-dark/50 dark:text-background-light/50" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

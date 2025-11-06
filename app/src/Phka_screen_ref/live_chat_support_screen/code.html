@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen justify-between">
+<div class="flex-grow">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center p-4">
+<button class="text-stone-800 dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<div class="flex-1 text-center">
+<h1 class="text-lg font-bold text-stone-900 dark:text-white">Support</h1>
+<div class="flex items-center justify-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+<p class="text-xs text-stone-600 dark:text-stone-400">Online Now</p>
+</div>
+</div>
+<div class="w-8"></div> 
+</div>
+<hr class="border-stone-200 dark:border-stone-800"/>
+</header>
+<main class="p-4 space-y-6">
+<div class="flex items-end gap-3">
+<img alt="Support Agent Avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-IyA_0d8PD9w_iQPhQQxRLsMEB72WvCQRmOwZnyejOEcVdzDJUYXNs8ieZY9yaPDQX1cnmuKBO2B9fkQZJSvXWMBDZrFVTSMwjbDvszTA7PE1g3QuwFUZyccNeXKS2oUhzdz2vgpM5pwU-dWAXVo-gBZQ80MWZCqH3DrXvB4R2Gh0CsRdMQ4A1qSyfHAkzVNqgpzFqw4gdWJce_bcoNdldz1f1vMJ7VQC018Q9RfZ_dGpI7w2MPjuWNcdqcr8m7X3kZhbMRBvams"/>
+<div class="flex flex-col gap-1 items-start">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg rounded-bl-none max-w-xs">
+<p class="text-sm text-stone-800 dark:text-stone-200">Hi there! How can I help you today?</p>
+</div>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-col gap-1 items-end">
+<div class="bg-primary p-3 rounded-lg rounded-br-none max-w-xs">
+<p class="text-sm text-white">Hi, I have a question about my order.</p>
+</div>
+</div>
+<img alt="User Avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADK8AyLsy34MYAtvyVIyUGFeN_YDCAuG7Vq36bGCkQJIXaPRIAjiz9nXHEgUL_YfnPq0zk0GuVzHc1FjLik39f6zpPJXEmAdkO_UZ6eoX7l51X4k-5Wxa2oyt1ttPI0nL7RmOGbMgdQ6_7F4VNa8yaXS9dM0D9aNBhtKoyki6D5m0_jqjtY6H8MYcFKR8VW_kYgn2UVXCqF375Bll6IAa4XhQKrUe0dDMubFFe8e0BPoxVfsZ4mwmLuRSAGlEy44YM_qROn04hZJY"/>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-stone-600 dark:text-stone-400 px-1 pb-3">Quick Replies</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 text-sm font-medium text-primary bg-primary/10 dark:bg-primary/20 rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Where is my order?</button>
+<button class="px-4 py-2 text-sm font-medium text-primary bg-primary/10 dark:bg-primary/20 rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">How do I return an item?</button>
+<button class="px-4 py-2 text-sm font-medium text-primary bg-primary/10 dark:bg-primary/20 rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Shipping options?</button>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark py-3 px-4">
+<div class="flex items-center gap-2 bg-stone-200/50 dark:bg-stone-900/50 rounded-xl p-1">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-stone-800 dark:text-stone-200 placeholder:text-stone-500 dark:placeholder:text-stone-400 text-sm px-3 py-2" placeholder="Type a message..." type="text"/>
+<button class="p-2 text-stone-500 dark:text-stone-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</button>
+<button class="p-2 rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</footer>
+</div>
+
+</body></html>

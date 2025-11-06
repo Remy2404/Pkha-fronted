@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-stone-800 dark:text-stone-200">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center text-stone-900 dark:text-stone-100 pr-6">Order Details</h1>
+</div>
+<hr class="border-stone-200 dark:border-stone-800"/>
+</header>
+<main class="flex-grow p-4 space-y-6">
+<div class="grid grid-cols-2 gap-x-4 gap-y-4">
+<div>
+<h2 class="text-sm font-medium text-stone-500 dark:text-stone-400">Order placed</h2>
+<p class="font-bold text-stone-900 dark:text-stone-100">July 20, 2024</p>
+</div>
+<div>
+<h2 class="text-sm font-medium text-stone-500 dark:text-stone-400">Total</h2>
+<p class="font-bold text-stone-900 dark:text-stone-100">$120.00</p>
+</div>
+<div>
+<h2 class="text-sm font-medium text-stone-500 dark:text-stone-400">Order #</h2>
+<p class="font-bold text-stone-900 dark:text-stone-100">1234567890</p>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-lg font-bold text-stone-900 dark:text-stone-100">Items (3)</h2>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-center bg-no-repeat bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmkMvjcUWgqGJWT_s4eSubTX2RCSytQCjVfb9O3UGXNOnnoQemd_FKFiagc2Gw9fkbEfIfm3okadPAy8mGNiGmEjz8Tggx8WRVbS2aOO7-d8y1EUkv2yzbXWW1z3grcB8TmE72LqbwX2gZI0fV5BIEcl8dkp7l6c_7jr8Xa0nOGjjlsSY7lOjE3czZTsySYz9sRd2opd0Y0QXxT6PJEnYDk6w_Pci4nmaT3MkFK50EfcQeVAtHl-JC6QdiDRPeA96JMGuBKoiDlAQ');"></div>
+<div class="flex-1">
+<p class="font-bold text-stone-900 dark:text-stone-100">Radiant Glow Serum</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Quantity: 2</p>
+</div>
+<p class="font-bold text-stone-900 dark:text-stone-100">$80.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-center bg-no-repeat bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQRTP6kkQ6_69oL7h-TnTGkGJEsuMoWHInYxNXgRA3SRqmJjtRdKYCsZ06eQx_GZ5pL8AYnD-JtqXlrsFzY6Up6tYowANYo_zin2ec03vN2Qz4m4zlEGNhmmAkvD6mf3tIK_R3tmtn-mFo_0ixpevpX0VMXQMBDGeEWg8Dj5ItnJLCTlG9ZhlPpwebJYw51k4tTxT6wGvrNEjbkMMaijIXNqLHIaaLnRzDoaUsLcKLBdux9Fg2NJk8vcsmljsZqFyAcphEnIpcgQU');"></div>
+<div class="flex-1">
+<p class="font-bold text-stone-900 dark:text-stone-100">Hydrating Face Mask</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Quantity: 1</p>
+</div>
+<p class="font-bold text-stone-900 dark:text-stone-100">$40.00</p>
+</div>
+</div>
+<div class="space-y-2">
+<h2 class="text-lg font-bold text-stone-900 dark:text-stone-100">Shipping Address</h2>
+<p class="text-stone-600 dark:text-stone-300">Sophia Chen<br/>123 Main Street<br/>Anytown, CA 91234</p>
+</div>
+<div class="space-y-2">
+<h2 class="text-lg font-bold text-stone-900 dark:text-stone-100">Payment Method</h2>
+<p class="text-stone-600 dark:text-stone-300">Credit Card ending in 1234</p>
+</div>
+<div class="flex gap-4 pt-2">
+<button class="flex-1 h-12 px-5 text-sm font-bold text-stone-800 dark:text-stone-200 bg-primary/20 dark:bg-primary/30 rounded-xl">Download Receipt</button>
+<button class="flex-1 h-12 px-5 text-sm font-bold text-stone-800 dark:text-stone-200 bg-primary/20 dark:bg-primary/30 rounded-xl">Contact Support</button>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark">
+<div class="p-4">
+<button class="w-full h-12 text-base font-bold text-white bg-primary rounded-xl">Order Again</button>
+</div>
+<div class="flex justify-around py-2 border-t border-stone-200 dark:border-stone-800">
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path>
+</svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 dark:text-stone-400" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path>
+</svg>
+<span class="text-xs font-bold">Profile</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

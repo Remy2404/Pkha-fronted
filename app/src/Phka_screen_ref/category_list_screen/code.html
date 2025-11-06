@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka E-commerce App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                        "content-light": "#1f1f1f",
+                        "content-dark": "#e5e5e5",
+                        "subtle-light": "#94878d",
+                        "subtle-dark": "#a39da0"
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col h-screen justify-between">
+<div class="flex-grow overflow-y-auto">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -m-2">
+<svg class="icon text-content-light dark:text-content-dark" viewBox="0 0 256 256">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-content-light dark:text-content-dark text-center flex-1 pr-8">Categories</h1>
+</div>
+</header>
+<main class="p-4">
+<h2 class="text-xl font-bold text-content-light dark:text-content-dark mb-4">All Categories</h2>
+<div class="space-y-2">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors duration-200">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<svg class="icon" viewBox="0 0 256 256"><path d="M232,32a8,8,0,0,0-8-8c-44.08,0-89.31,49.71-114.43,82.63A60,60,0,0,0,32,164c0,30.88-19.54,44.73-20.47,45.37A8,8,0,0,0,16,224H92a60,60,0,0,0,57.37-77.57C182.3,121.31,232,76.08,232,32ZM92,208H34.63C41.38,198.41,48,183.92,48,164a44,44,0,1,1,44,44Zm32.42-94.45q5.14-6.66,10.09-12.55A76.23,76.23,0,0,1,155,121.49q-5.9,4.94-12.55,10.09A60.54,60.54,0,0,0,124.42,113.55Zm42.7-2.68a92.57,92.57,0,0,0-22-22c31.78-34.53,55.75-45,69.9-47.91C212.17,55.12,201.65,79.09,167.12,110.87Z"></path></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-content-light dark:text-content-dark">Foundation</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">120 items</p>
+</div>
+<svg class="icon text-subtle-light dark:text-subtle-dark" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors duration-200">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<svg class="icon" viewBox="0 0 256 256"><path d="M128,56C48,56,16,120,16,128s32,72,112,72,112-64,112-72S208,56,128,56Zm0,120c-80,0-101.4-53.33-102.81-64C26.6,105.33,48,72,128,72s101.4,33.33,102.81,44C229.4,124.67,208,176,128,176Zm0-88a24,24,0,1,0,24,24A24,24,0,0,0,128,88Zm0,32a8,8,0,1,1,8-8A8,8,0,0,1,128,120Z"></path></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-content-light dark:text-content-dark">Concealer</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">80 items</p>
+</div>
+<svg class="icon text-subtle-light dark:text-subtle-dark" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors duration-200">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<svg class="icon" viewBox="0 0 256 256"><path d="M208,64H176V48a16,16,0,0,0-16-16H96A16,16,0,0,0,80,48v16H48A16,16,0,0,0,32,80V192a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V80A16,16,0,0,0,208,64Zm-32,96H80V96H176ZM96,48h64V64H96Z"></path></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-content-light dark:text-content-dark">Setting Powder</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">60 items</p>
+</div>
+<svg class="icon text-subtle-light dark:text-subtle-dark" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors duration-200">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<svg class="icon" viewBox="0 0 256 256"><path d="M211.45,152.29C227.3,124,204,80,160,80c-26.65,0-53.51,12.5-70.36,32.33C64.6,90,32,106.67,32,128c0,29.35,39.42,48,64,48,15.11,0,28.49-4.83,38.8-12.72.31-.24.62-.48.92-.73a56,56,0,0,0,12,38.43,8,8,0,0,0,13.6-8C152.12,175.72,185,191.56,211.45,152.29ZM144,152a8,8,0,0,0-10.23-5.34C122.3,152.6,109.11,156,96,156c-13.87,0-32-6.53-32-28,0-15.68,17.48-26.91,30.36-32.33,18.06-7.62,40.16-11.67,59.64-11.67,30.34,0,46.12,28.46,37.38,48.29C182.26,149,158.74,142,144,152Z"></path></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-content-light dark:text-content-dark">Brushes</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">40 items</p>
+</div>
+<svg class="icon text-subtle-light dark:text-subtle-dark" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors duration-200">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<svg class="icon" viewBox="0 0 256 256"><path d="M216,48H40a16,16,0,0,0-16,16v88a56,56,0,0,0,112,0v-8H160v8a40,40,0,0,1-80,0V64H216a8,8,0,0,1,8,8v48h16V56A16,16,0,0,0,216,48ZM144,152a40,40,0,0,1-80,0v-8h80Z"></path></svg>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-content-light dark:text-content-dark">Lipstick</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">100 items</p>
+</div>
+<svg class="icon text-subtle-light dark:text-subtle-dark" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-primary/20">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-light dark:text-subtle-dark w-1/4 p-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<svg class="icon" viewBox="0 0 256 256"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary w-1/4 p-2 rounded-lg bg-primary/10 dark:bg-primary/20" href="#">
+<svg class="icon" viewBox="0 0 256 256"><path d="M56,128a16,16,0,1,1-16-16A16,16,0,0,1,56,128ZM40,48A16,16,0,1,0,56,64,16,16,0,0,0,40,48Zm0,128a16,16,0,1,0,16,16A16,16,0,0,0,40,176Zm176-64H88a8,8,0,0,0-8,8v16a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V120A8,8,0,0,0,216,112Zm0-64H88a8,8,0,0,0-8,8V72a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V56A8,8,0,0,0,216,48Zm0,128H88a8,8,0,0,0-8,8v16a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V184A8,8,0,0,0,216,176Z"></path></svg>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-light dark:text-subtle-dark w-1/4 p-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<svg class="icon" viewBox="0 0 256 256"><path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path></svg>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-light dark:text-subtle-dark w-1/4 p-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<svg class="icon" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+<div class="pb-safe-area-bottom"></div>
+</footer>
+</div>
+
+</body></html>

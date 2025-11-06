@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Phka - Order Confirmation</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center p-4">
+<button class="text-black dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-black dark:text-white pr-6">Order Confirmed!</h1>
+</header>
+<main class="flex-1 px-4 py-8 text-center text-black dark:text-white">
+<div class="flex flex-col items-center gap-4">
+<div class="w-24 h-24 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-size: 48px;">check_circle</span>
+</div>
+<h2 class="text-2xl font-bold">Thank you for your order!</h2>
+<p class="text-sm text-black/60 dark:text-white/60 max-w-sm">Your order #1234567890 has been placed successfully. You will receive an email with your order details and tracking information.</p>
+</div>
+<div class="mt-8 space-y-6">
+<div class="flex items-start gap-4 text-left">
+<div class="w-12 h-12 rounded-lg bg-primary/20 dark:bg-primary/30 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+</div>
+<div>
+<h3 class="font-bold">Estimated Delivery</h3>
+<p class="text-sm text-black/60 dark:text-white/60">Jul 20 - Jul 22</p>
+</div>
+</div>
+</div>
+<div class="mt-8 text-left">
+<h3 class="text-lg font-bold">Order Details</h3>
+<div class="mt-4 space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwWQmtUrfjGYWEKyIlcxPBc1WW2gr76KAv9jzBYqP_b_-tD_mc77ER3LgvZt6c2jneRqZ2reuFzyw1w-z-ZBvaHU_XQQFAA-q8ARthLzpFCQxODir6v8YjlZdGR7X5IVavggkL1tkpsij8oeMFRjcXtCUwDroMTdg5VLLrhG7ZN527ctETNgSX5Lk-E8gWdhlWBJR9Ypo_kd1NfG_TmeiRQYKyPO8GcUaAz1AwaSkXYgyJ1s28EbnKJSm3jO9D1e697nbvKOdV6qY");'></div>
+<div class="flex-1">
+<p class="font-bold">Radiant Glow Serum</p>
+<p class="text-sm text-black/60 dark:text-white/60">Qty: 1</p>
+</div>
+<p class="font-bold">$25.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcOvrlf-UOnmxm3Gp_fV62cHjXwmRvLWu9QZsKpked8yi2rZHCSxCzIIQ5lTTvfsYfInScUI2KwVXbu-vqX8-CSIbUDgekC47OQnkSgGwBAMReWN8Tjq6s0A5TMEIiXfhFF5hjdcBZ3Dv-vNDEEJlHcEzdKIbVKH1TLJGkPuy6xMdD2hdUQsuA0zmYq9RBYu_zWd53pszaOzTGyk4sYyotA7828xwJuPmD2ckvpo_mqkeLB29H1_hRKYSy3Sel84cEy4ZchnG1y7c");'></div>
+<div class="flex-1">
+<p class="font-bold">Hydrating Face Mask</p>
+<p class="text-sm text-black/60 dark:text-white/60">Qty: 1</p>
+</div>
+<p class="font-bold">$15.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5smY586CPp_HSrJ5zo0jZfpsKslR_RbZRrAVvw8I_jPPfrsTadAnFi8wLwxOlh_HovUqji1anxkVcaKMj_RXbZZtg7rU0O-zPSPRmdbeklJduMWT7J2dAF3BnMnrZK7DkugBJMw4wIKMq7A2lbHmHoWjEaKuuFufay85S3F-cV1VjAd-5DgN_fyL6fEZnn33yFts8S_maCp3hJiahuE4NfVYYFHZN1AF972glyl3L3sOi3mD6eVbhjnU6FCX10B8nGOQ8eVFlhBA");'></div>
+<div class="flex-1">
+<p class="font-bold">Nourishing Hair Oil</p>
+<p class="text-sm text-black/60 dark:text-white/60">Qty: 1</p>
+</div>
+<p class="font-bold">$15.00</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-black/10 dark:border-white/10 text-left">
+<div class="space-y-2 text-sm">
+<div class="flex justify-between">
+<p class="text-black/60 dark:text-white/60">Subtotal</p>
+<p>$55.00</p>
+</div>
+<div class="flex justify-between">
+<p class="text-black/60 dark:text-white/60">Shipping</p>
+<p>$5.00</p>
+</div>
+<div class="flex justify-between">
+<p class="text-black/60 dark:text-white/60">Tax</p>
+<p>$5.50</p>
+</div>
+<div class="flex justify-between font-bold text-base mt-2">
+<p>Total</p>
+<p>$65.50</p>
+</div>
+</div>
+</div>
+<div class="mt-8 space-y-3">
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl">Track Order</button>
+<button class="w-full bg-primary/20 dark:bg-primary/30 text-primary font-bold py-3 rounded-xl">Continue Shopping</button>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-black/60 dark:text-white/60" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-black/60 dark:text-white/60" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-black/60 dark:text-white/60" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                        "content-light": "#1f1f1f",
+                        "content-dark": "#e5e5e5",
+                        "subtle-light": "#8f8f8f",
+                        "subtle-dark": "#a0a0a0"
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -m-2">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center">Complete Your Routine</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<section class="py-4">
+<h2 class="px-4 mb-3 text-xl font-bold">Frequently Bought Together</h2>
+<div class="flex px-4 space-x-4 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex flex-col w-40 space-y-2 shrink-0">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiqxDol5q6h5V2XCDU3eFJ1D9CXuZvslhsarMvBZVB9HvYar9SomZyKYK-BUBYOudFYOMiPpt3BKrref-QfjESI2CSH3BJe81yIRevCctlleX56qoW96JsQttSHXXl8Xf0KiG64tYkFsqfw4LontzwEIobivLS7dqq07mqSbH8ZKl56C3u-vogIZOtx1Ywo9L8RY3apTcx_QK_Xynb-KgfB2FLGk91bTPc-rD_Adyj9awvRu4xlKCv9gAkphcC12PfPrkB8wGCKok');"></div>
+<div>
+<h3 class="font-medium leading-tight">Hydrating Cleanser</h3>
+<p class="font-medium text-primary">$25</p>
+</div>
+</div>
+<div class="flex flex-col w-40 space-y-2 shrink-0">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0nddAoI2CT87YWzCTZTLs_hbMrn6zaeB9YGK0nA6s2QBFsG87u-U4MCZAZFXC-t22_Wy1nXPI5uvxwpqKI-IEenKWGUGXQhxWDqY5LgRLaAf6zPpyseL34kK8vGSWQ1zMtX4_Ijpy01UMiycC67iBrC8WjfEoHHtA7dzrL505Q98H1BwEUti6Nplq1t0vM3U0HndJSfkqew7cbkMLh2P8eqdbetjuvxvfx7-HUV2V4NeK954EEG3mP5evjFV5ccdDwnqExYdYzYo');"></div>
+<div>
+<h3 class="font-medium leading-tight">Daily Moisturizer</h3>
+<p class="font-medium text-primary">$30</p>
+</div>
+</div>
+<div class="flex flex-col w-40 space-y-2 shrink-0">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUAziFy5AzaDvTL2i8h_4oholl1qe2VDyVZ-_Jxy4kPNQYmT5jtJkbOSzjEhHiz3JsphhlccF3VKx8v0MWcU0ic3TDhmRvn4Gsl1WdKLbSPZ7LaiMGRvn1y6nhej49eBG7cgs50OMDPpjC83wq124JHkJys01Yc_l2HzBI8koudXnzLhuS59o0QQK_DkcSQRLcmM1GUbtKOa0kjZmg5XgXoeQdxesc1Rs_qj4piIGdeQssbb8dxn9V60VXET3oYKqP3vo5EB9uc4A');"></div>
+<div>
+<h3 class="font-medium leading-tight">Sunscreen SPF 30</h3>
+<p class="font-medium text-primary">$20</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-4">
+<h2 class="px-4 mb-3 text-xl font-bold">Similar Items</h2>
+<div class="flex px-4 space-x-4 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex flex-col w-40 space-y-2 shrink-0">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFq6aFpIEMizpcBilgDKGqZKIJ_hkRSJCM9wqI3riQ5aB1zEnSb0eZV167Uoe9kfYn7jcbhFWFCcKjy7hdShS7VDxlwQk2SZETXgA2V_ANl_8IYq7rYAQnNcjq6DUJQ07jCFk_Mj3DDajiO-cuB1MlpD9Db3q0cuqnIsAJzaN6hSuBFKVdZW1GevbMsDnG0Ixdx4LcXoWhdVwR1HQNaowFwHl047U6RoOwnfVEPt2nXlhFI79i8GfSWxDM58armlmHd_DDoFMBuZc');"></div>
+<div>
+<h3 class="font-medium leading-tight">Gentle Exfoliating Scrub</h3>
+<p class="font-medium text-primary">$22</p>
+</div>
+</div>
+<div class="flex flex-col w-40 space-y-2 shrink-0">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEMuAzmsCwa1DZWVG-dqBBpDGhuL062_b5isG7IMnhQk7o-VdOfxu_YGXDG8_V722XT-fOOnYUdahJWXUsUVwyxSJY8ABwzG4IuTSC4OukwwWign_1ZmnUhFY3w5FC07iRWubtAPPdMJJEA6NNVBNANu8fPx0KroCKes6tuZUehC-oOZukur4MMlu7u5TPng3KSnRddnzyZiE5fBzS0OF9LhMP-aLi8kyWJeMv_vrz3pMrAIXdofRM_zvB2uPf2ILMl-K4TLMHEa4');"></div>
+<div>
+<h3 class="font-medium leading-tight">Night Repair Serum</h3>
+<p class="font-medium text-primary">$35</p>
+</div>
+</div>
+<div class="flex flex-col w-40 space-y-2 shrink-0">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBSYAogfH7bloTqVDqrSkEVHJKz9Y7v8MOZAPJpOrHgAxZTHSUqWv1zJhOLBrf-bFw8xwXitREey--_lcyoC7szsL_us3ZRIQyjbQLofeG11aKD8ZOvuAioXW-zd7VXRjmtZVBLUgcNl421Pu2-WzX5V36x0Bt724pVOfnPSbTaWbJW8HtqFHY1Rq3JwtY_kCrc7xV9IM04F_mf6xR7AGtXDCqAXx372kABYypvMVTdeZtEQPWpXcUWngM2ddc85PqgUkWV6-qz0Y');"></div>
+<div>
+<h3 class="font-medium leading-tight">Eye Cream</h3>
+<p class="font-medium text-primary">$28</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-primary/20">
+<nav class="flex justify-around px-2 pt-2 pb-4">
+<a class="flex flex-col items-center flex-1 gap-1 text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center flex-1 gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center flex-1 gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center flex-1 gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col justify-between">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<button class="text-black dark:text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-black dark:text-white absolute left-1/2 -translate-x-1/2">Settings</h1>
+</header>
+<main class="px-4 pb-24">
+<div class="space-y-8">
+<section>
+<h2 class="text-lg font-bold text-black dark:text-white mb-4">App Settings</h2>
+<div class="space-y-2 bg-background-light/80 dark:bg-background-dark/80 rounded-lg p-4 backdrop-blur-sm">
+<div class="flex items-center justify-between py-2">
+<p class="text-base text-black dark:text-white">Notifications</p>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-primary/20 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-gray-600 dark:bg-primary/30"></div>
+</label>
+</div>
+<div class="h-px bg-primary/10 dark:bg-primary/20"></div>
+<div class="flex items-center justify-between py-2">
+<p class="text-base text-black dark:text-white">Language</p>
+<p class="text-base text-black/60 dark:text-white/60">English</p>
+</div>
+<div class="h-px bg-primary/10 dark:bg-primary/20"></div>
+<div class="flex items-center justify-between py-2">
+<p class="text-base text-black dark:text-white">Currency</p>
+<p class="text-base text-black/60 dark:text-white/60">USD</p>
+</div>
+<div class="h-px bg-primary/10 dark:bg-primary/20"></div>
+<div class="flex items-center justify-between py-2">
+<p class="text-base text-black dark:text-white">Dark Mode</p>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-primary/20 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-gray-600 dark:bg-primary/30"></div>
+</label>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-lg font-bold text-black dark:text-white mb-4">Theme</h2>
+<div class="grid grid-cols-3 gap-4">
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only" name="theme" type="radio"/>
+<div class="rounded-lg border-2 border-primary/20 dark:border-primary/30 p-4 text-center text-black dark:text-white peer-checked:border-primary peer-checked:bg-primary/10 dark:peer-checked:bg-primary/20">Default</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="theme" type="radio"/>
+<div class="rounded-lg border-2 border-primary/20 dark:border-primary/30 p-4 text-center text-black dark:text-white peer-checked:border-primary peer-checked:bg-primary/10 dark:peer-checked:bg-primary/20">Pink</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="theme" type="radio"/>
+<div class="rounded-lg border-2 border-primary/20 dark:border-primary/30 p-4 text-center text-black dark:text-white peer-checked:border-primary peer-checked:bg-primary/10 dark:peer-checked:bg-primary/20">Green</div>
+</label>
+</div>
+</section>
+<section>
+<h2 class="text-lg font-bold text-black dark:text-white mb-4">Legal</h2>
+<div class="space-y-2 bg-background-light/80 dark:bg-background-dark/80 rounded-lg p-4 backdrop-blur-sm">
+<a class="flex items-center justify-between py-2" href="#">
+<p class="text-base text-black dark:text-white">Privacy Policy</p>
+<svg class="text-black/60 dark:text-white/60" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M181.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L164.69,128,98.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,181.66,133.66Z" transform="scale(1.2) translate(-20, -20)"></path>
+</svg>
+</a>
+<div class="h-px bg-primary/10 dark:bg-primary/20"></div>
+<a class="flex items-center justify-between py-2" href="#">
+<p class="text-base text-black dark:text-white">Terms of Service</p>
+<svg class="text-black/60 dark:text-white/60" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M181.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L164.69,128,98.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,181.66,133.66Z" transform="scale(1.2) translate(-20, -20)"></path>
+</svg>
+</a>
+</div>
+</section>
+<section>
+<h2 class="text-lg font-bold text-black dark:text-white mb-4">Data Management</h2>
+<div class="space-y-2 bg-background-light/80 dark:bg-background-dark/80 rounded-lg p-4 backdrop-blur-sm">
+<a class="flex items-center justify-between py-2" href="#">
+<p class="text-base text-black dark:text-white">Clear Cache</p>
+<svg class="text-black/60 dark:text-white/60" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M181.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L164.69,128,98.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,181.66,133.66Z" transform="scale(1.2) translate(-20, -20)"></path>
+</svg>
+</a>
+</div>
+</section>
+</div>
+</main>
+</div>
+<footer class="fixed bottom-0 left-0 right-0 border-t border-primary/20 bg-background-light/80 dark:border-primary/30 dark:bg-background-dark/80 backdrop-blur-sm">
+<nav class="flex justify-around py-2">
+<a class="flex flex-col items-center gap-1 text-black/60 dark:text-white/60" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path>
+</svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black/60 dark:text-white/60" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black/60 dark:text-white/60" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path>
+</svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

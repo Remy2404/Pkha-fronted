@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka E-commerce App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Epilogue"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Epilogue', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative min-h-screen w-full font-display">
+<div class="absolute inset-0 bg-gray-900 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxPMK2LFG9obwSbZ7lPD9dB5b92JOk7rMOiRTI36ipg1AZYfFnfI1zQmT1y2Hn-W764WnLplRU7xkcUM2MDuDMvIkE_mKp7RV2YFhRUwgxQ6R08Qipd9zrzcLeNdbtiqefpYIjLrCbtUPofehRugFUQOH91r1RtMydn--zAl4FUN_dX2RL5MPplfy9ArkOKAM0FaMWU3i8AUlkTR2wlDtssfokGINPYopjJo8wdPGla8v16msJZe2wX2D5StYdt1t1X9fSkyubzf0');">
+</div>
+<div class="absolute top-0 left-0 right-0 flex justify-end p-4">
+<button class="flex items-center justify-center h-12 w-12 rounded-full bg-black/30 text-white">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+</svg>
+</button>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-64 h-80 border-2 border-dashed border-white/50 rounded-xl"></div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 flex flex-col">
+<div class="flex items-center justify-center gap-6 p-4 mb-4">
+<button class="flex shrink-0 items-center justify-center rounded-full size-12 bg-black/30 text-white backdrop-blur-sm">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H72A16,16,0,0,0,56,56V72H40A16,16,0,0,0,24,88V200a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V184h16a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM72,56H216v62.75l-10.07-10.06a16,16,0,0,0-22.63,0l-20,20-44-44a16,16,0,0,0-22.62,0L72,109.37ZM184,200H40V88H56v80a16,16,0,0,0,16,16H184Zm32-32H72V132l36-36,49.66,49.66a8,8,0,0,0,11.31,0L194.63,120,216,141.38V168ZM160,84a12,12,0,1,1,12,12A12,12,0,0,1,160,84Z"></path>
+</svg>
+</button>
+<button class="flex shrink-0 items-center justify-center rounded-full size-20 bg-white text-primary backdrop-blur-sm">
+<svg fill="currentColor" height="40" viewBox="0 0 256 256" width="40" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,56H180.28L166.65,35.56A8,8,0,0,0,160,32H96a8,8,0,0,0-6.65,3.56L75.71,56H48A24,24,0,0,0,24,80V192a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V80A24,24,0,0,0,208,56Zm-44,76a36,36,0,1,1-36-36A36,36,0,0,1,164,132Z"></path>
+</svg>
+</button>
+<button class="flex shrink-0 items-center justify-center rounded-full size-12 bg-black/30 text-white backdrop-blur-sm">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M248,144a8,8,0,0,1-16,0,96.11,96.11,0,0,0-96-96,88.1,88.1,0,0,0-88,88,80.09,80.09,0,0,0,80,80,72.08,72.08,0,0,0,72-72,64.07,64.07,0,0,0-64-64,56.06,56.06,0,0,0-56,56,48.05,48.05,0,0,0,48,48,40,40,0,0,0,40-40,32,32,0,0,0-32-32,24,24,0,0,0-24,24,16,16,0,0,0,16,16,8,8,0,0,0,8-8,8,8,0,0,1,0-16,16,16,0,0,1,16,16,24,24,0,0,1-24,24,32,32,0,0,1-32-32,40,40,0,0,1,40-40,48.05,48.05,0,0,1,48,48,56.06,56.06,0,0,1-56,56,64.07,64.07,0,0,1-64-64,72.08,72.08,0,0,1,72-72,80.09,80.09,0,0,1,80,80,88.1,88.1,0,0,1-88,88,96.11,96.11,0,0,1-96-96A104.11,104.11,0,0,1,136,32,112.12,112.12,0,0,1,248,144Z"></path>
+</svg>
+</button>
+</div>
+<div class="bg-background-light dark:bg-background-dark rounded-t-xl">
+<div class="flex justify-center py-3">
+<div class="w-10 h-1 rounded-full bg-gray-300 dark:bg-gray-700"></div>
+</div>
+<div class="px-4 pb-4">
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Find your shade</h1>
+<p class="text-gray-600 dark:text-gray-400 mt-1 mb-4">Select a shade to try on virtually</p>
+<div class="flex flex-wrap justify-center gap-4">
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="shade" type="radio"/>
+<div class="w-12 h-12 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(242, 230, 217);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="shade" type="radio"/>
+<div class="w-12 h-12 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(230, 217, 204);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only" name="shade" type="radio"/>
+<div class="w-12 h-12 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(217, 204, 191);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="shade" type="radio"/>
+<div class="w-12 h-12 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(204, 191, 162);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="shade" type="radio"/>
+<div class="w-12 h-12 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(191, 162, 133);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="shade" type="radio"/>
+<div class="w-12 h-12 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(162, 133, 104);"></div>
+</label>
+</div>
+<div class="mt-6">
+<button class="w-full h-12 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold text-sm">
+              Try other products
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

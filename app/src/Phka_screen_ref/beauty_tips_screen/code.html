@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ec1380",
+                "background-light": "#f8f6f7",
+                "background-dark": "#221019",
+                "content-light": "#1b0d14",
+                "content-dark": "#f8f6f7",
+                "subtle-light": "#9a4c73",
+                "subtle-dark": "#e7cfdb"
+              },
+              fontFamily: {
+                "display": ["Epilogue"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .text-content-light { color: #1b0d14 }
+        .dark .text-content-dark { color: #f8f6f7 }
+        .text-subtle-light { color: #9a4c73 }
+        .dark .text-subtle-dark { color: #e7cfdb }
+        .border-subtle-light { border-color: #e7cfdb }
+        .dark .border-subtle-dark { border-color: #3b2a33 }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="relative flex min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4 pb-2">
+<button class="flex h-12 w-12 items-center justify-center text-content-light dark:text-content-dark">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold">Beauty Tips</h1>
+<div class="w-12"></div>
+</header>
+<main>
+<section class="px-4 py-5">
+<h2 class="text-2xl font-bold">Tip of the Day</h2>
+<div class="mt-3 overflow-hidden rounded-xl bg-background-light dark:bg-primary/10 shadow-sm">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYMvE0Q_6HRxu-0O0UR9tNtoBpc76gW1ETDUeYWhsMCAV9RPr5kq33K_UxtK1iUtKD8Rn1WCQ4Fdfr3cs_gJZwsC_U0DRotnfC7iA6RIQuPLvFFqF5IITm4PZ1yfy4Kz3mEVIiBCQy7zJ8U-CLy05xN5c3Pmd-t3Xnd9zNOqF_fU_8EMzfv_GFQygzNKIXlGqfNn5sfjMO3Z5gFNc9Xp0zkek-bXUfKW3ecw73bi3OYhviF6p2l_pc1Mwwi6z8ZqDpsBMdhEfx2MQ");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold">Hydrate your skin</h3>
+<p class="mt-1 text-subtle-light dark:text-subtle-dark">Drink plenty of water throughout the day to keep your skin hydrated and glowing.</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="px-4 pt-5 pb-3 text-2xl font-bold">Categories</h2>
+<div class="border-b border-subtle-light dark:border-subtle-dark">
+<nav class="flex gap-8 px-4">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary py-3" href="#">
+<span class="text-sm font-bold text-primary">Skincare</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent py-3" href="#">
+<span class="text-sm font-bold text-subtle-light dark:text-subtle-dark">Makeup</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent py-3" href="#">
+<span class="text-sm font-bold text-subtle-light dark:text-subtle-dark">Hair Care</span>
+</a>
+</nav>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<a class="group" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-xl">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNzShwI1KzcJzI6GoXSSd_G3s_D2D3fCEgSXV0C9m4eGhA7OoB6wMiEdUeFosWpYvMReatsyrkaysnO1hI2UvB7SaSSa7pxsnxrOjf8A7x0nEcyCgk_MITI-aEKw9l39bDcQufNNApLQtDy2NkQsfYhvCSZyh9ubfWj2lHe58AmJK6aWOwDvcBB5v87wqpP8tcBkyJf8NkYS1NukpW2_nBBXleca0wuqjFxPi6FGIsZcdvOKzQC6FxKCUP-wnIh4t5sN4pAooNoyA");'></div>
+</div>
+<p class="mt-2 text-base font-medium">Morning Skincare Routine</p>
+</a>
+<a class="group" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-xl">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsHLuKvO18cye2_9-tLDwhp0iJYahO7BOpq1oYTRvZ1VPwas0-lua6rkyFGqlHuos66Q-48SzlOOGRc6gMbHXI441AIXyu0tSusSjiAmSf3jbeQ9JXB-DcoOnWlxTFH2F0b_Mfb-OzlTnuWD2QLdiF0u7yWi3Ot4mGfZ-ZwBoJOHPLlbCarmv2Wbvgg5U8_W8tGuzBxMhl13PUktB7AYXOVubRQjpCvdGR4h99pQfQiPYUM0QLCwPrWmEEGSfbsmpS7T7zY18EZPU");'></div>
+</div>
+<p class="mt-2 text-base font-medium">Night Skincare Routine</p>
+</a>
+<a class="group" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-xl">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd5EDQ2nw9lqw2KvcFSCTY6HThvzav0S34UKTYHfMsruxv1d5FaXigIqeB4tNGxaQoHgbnusT-fI5jNIaEFEXwbY3-AAUjxarMQI3D-qKOzOT0lWw6rBz_Hl81LzkmAGx2iWNNvDnHQOBvPr1_9SC2NO4aBlR-TkrclGJ-m7gPukgpr-s_Rd76se1FzuRYICnoR6SOVjruUsCcFVRMnbLtSBxyYjn3lIFQM0BaY5eO0lhHR1aQ2XxBakrPdMhkun7hfRtU8-2UhHw");'></div>
+</div>
+<p class="mt-2 text-base font-medium">Acne Treatment</p>
+</a>
+<a class="group" href="#">
+<div class="aspect-square w-full overflow-hidden rounded-xl">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZ3Kz7aS9sM-j8wRr1i6FJQzQQCBqeiYL2aRLy84jLNjMgqRYyKe1jqSO5_Mjt36y1uzxGb8LemloeA_iqE5pnC9YGPAzpunFYwRWByEW1nQsPQTUglzAQEQ-FEeW56_bd0qA-BhsRyjlh48wCEL3uBnf2zWt3A1R91eTDBZbanAhoFCo7jM12b9W-__JTEqZGENfOeNlerfm97jz1weG877EXv3Hii04rgpvLbbr1b3Bpl_381vXsvO2gl_Trc5qTW_gb0Zpr0vY");'></div>
+</div>
+<p class="mt-2 text-base font-medium">Anti-Aging Tips</p>
+</a>
+</div>
+</section>
+<section class="space-y-4 px-4 py-5">
+<h2 class="text-2xl font-bold">Expert Articles</h2>
+<a class="flex items-center gap-4 rounded-xl bg-background-light p-3 shadow-sm dark:bg-primary/10" href="#">
+<div class="flex-1">
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Article</p>
+<h3 class="mt-1 text-base font-bold">The Ultimate Guide to Choosing the Right Foundation</h3>
+<p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">By Dr. Anya Sharma</p>
+</div>
+<div class="aspect-square w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7YPQLrY3KRKU4O6LnNw0nMzLps3uYC5lvlsPXozsplVv59VsSwDLg0efLRxbCJHN2qSNnugSiAiewmRVtEWKcbzbHOzhr3IGGQDB377oJlpILRG2f5S7-dzDAbM8emjoykgZtREVle4VWtpaGluoimFUrc81oZ-DLI02eeVY5SZ56YZmN2gPGj5wpnum23LBM383Na3Iw6vVFsfvByg27T35J84r720hc9CWDr4u0HZYWrfFdwL2eRr72OXlaBLeInuh_fy4I1r0");'></div>
+</a>
+<a class="flex items-center gap-4 rounded-xl bg-background-light p-3 shadow-sm dark:bg-primary/10" href="#">
+<div class="flex-1">
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Article</p>
+<h3 class="mt-1 text-base font-bold">How to Achieve a Flawless Cat-Eye Look</h3>
+<p class="mt-1 text-sm text-subtle-light dark:text-subtle-dark">By Isabella Rossi</p>
+</div>
+<div class="aspect-square w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRJl5Yu8QA5E0hhO2y0d4MLcMwztwpx7rypvT7ZWVGqJWYRRmyrMaBoZMxo-AR9qp1NGXjl3N1HKzoxlruhS60VmkS1ioEcNESPQsC2u8NLY2i9_QlpbcDnSm59rf15XUxoW8tnQl_tjJxHZnAZ2VOzOlw87Hbx73VHeRHms8rm1DpFIwRKwQtBq87eC6mnSJkXVDizktwWZjOgH9TJK94vpcrV2RTEbrm84VX-Bw-8FqPMfnS27KnJmPTv4HJobLc3w9sLlI2i8Q");'></div>
+</a>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 border-t border-subtle-light bg-background-light/80 pb-3 pt-2 backdrop-blur-sm dark:border-subtle-dark dark:bg-background-dark/80">
+<nav class="flex justify-around">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M80,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H88A8,8,0,0,1,80,64Zm136,56H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM44,52A12,12,0,1,0,56,64,12,12,0,0,0,44,52Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,116Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,180Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Categories</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Cart</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

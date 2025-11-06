@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4 border-b border-primary/20 dark:border-primary/30">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Gift Cards</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow p-4 space-y-8">
+<div class="text-center">
+<h2 class="text-2xl font-bold">Send the Gift of Beauty</h2>
+<p class="text-gray-600 dark:text-gray-400 mt-2">Choose an amount and add a personal message.</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Choose an amount</h3>
+<div class="flex items-center space-x-3">
+<button class="flex-1 py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition-colors hover:bg-primary/20 dark:hover:bg-primary/30 focus:bg-primary focus:text-white">
+                        $25
+                    </button>
+<button class="flex-1 py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition-colors hover:bg-primary/20 dark:hover:bg-primary/30 focus:bg-primary focus:text-white">
+                        $50
+                    </button>
+<button class="flex-1 py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition-colors hover:bg-primary/20 dark:hover:bg-primary/30 focus:bg-primary focus:text-white">
+                        $100
+                    </button>
+</div>
+<input class="w-full mt-3 px-4 py-3 rounded-lg bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-500 dark:placeholder-gray-400" placeholder="Custom amount" type="number"/>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Personalize your gift</h3>
+<textarea class="w-full px-4 py-3 rounded-lg bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-500 dark:placeholder-gray-400" placeholder="Write a message" rows="4"></textarea>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold">Recipient</h3>
+<input class="w-full px-4 py-3 rounded-lg bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-500 dark:placeholder-gray-400" placeholder="Recipient's email" type="email"/>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-lg text-lg tracking-wide hover:opacity-90 transition-opacity">
+                    Purchase Gift Card
+                </button>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<nav class="flex justify-around items-center p-2">
+<a class="flex flex-col items-center justify-center w-1/4 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-1/4 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center w-1/4 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-xs">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center w-1/4 text-primary dark:text-primary font-bold" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-900 dark:text-stone-100">
+<div class="flex flex-col h-screen justify-between">
+<main class="flex-grow overflow-y-auto">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 rounded-full text-stone-900 dark:text-stone-100">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="flex-1 text-center font-bold text-lg text-stone-900 dark:text-stone-100 pr-10">Edit Item</h1>
+</div>
+</header>
+<div class="p-4">
+<div class="aspect-[4/3] bg-cover bg-center rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQi8a-lfvZyr4Nk3iPAr2QmrRhBKM_t6NdcaYnqBEe6iYzaK93I-LmE6fMD8rQRC2NTuTOcr8FHGFMxtVkjBgksV2MkgVNJwj_htC4Csg_qWiWFHCC9IDrl97Zhv3A4QLoJAWdnh2uYqOIO0g8kloxbySlViTGlGc5v_LlZH5bhfqz-tMAP6LIXjwmyYY3XSwRf5oPJXACTD8btiGkMamJT8q63UGk8HSFH3NAnCEj2iO1_OVvrV61D10j5Q0gvv4mfDek4XsZuDI");'></div>
+</div>
+<div class="px-4 pb-4">
+<h2 class="text-2xl font-bold text-stone-900 dark:text-stone-100">Radiant Glow Serum</h2>
+<p class="mt-2 text-stone-600 dark:text-stone-400">A lightweight serum that enhances skin's natural radiance.</p>
+<div class="mt-2 text-2xl font-bold text-stone-900 dark:text-stone-100">$29.99</div>
+</div>
+<div class="px-4 py-4 border-t border-b border-stone-200 dark:border-stone-800">
+<h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">Quantity</h3>
+<div class="flex items-center justify-between mt-3">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 text-primary">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="text-lg font-bold text-stone-900 dark:text-stone-100">1</span>
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 text-primary">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-4 py-4">
+<h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">Size</h3>
+<div class="flex flex-wrap gap-3 mt-3">
+<label class="relative cursor-pointer">
+<input checked="" class="sr-only" name="size" type="radio"/>
+<div class="px-5 py-2.5 rounded-lg border border-stone-300 dark:border-stone-700 font-medium text-stone-700 dark:text-stone-300 peer-checked:border-primary peer-checked:ring-2 peer-checked:ring-primary peer-checked:text-primary">30ml</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="sr-only" name="size" type="radio"/>
+<div class="px-5 py-2.5 rounded-lg border border-stone-300 dark:border-stone-700 font-medium text-stone-700 dark:text-stone-300 peer-checked:border-primary peer-checked:ring-2 peer-checked:ring-primary peer-checked:text-primary">50ml</div>
+</label>
+</div>
+</div>
+<div class="px-4 py-4">
+<h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">Color</h3>
+<div class="flex flex-wrap gap-4 mt-3">
+<label class="relative cursor-pointer">
+<input checked="" class="sr-only" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(255, 215, 0);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="sr-only" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(255, 99, 71);"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="sr-only" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full border-2 border-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-background-light dark:peer-checked:ring-offset-background-dark peer-checked:ring-primary" style="background-color: rgb(70, 130, 180);"></div>
+</label>
+</div>
+</div>
+</main>
+<footer class="p-4 bg-background-light dark:bg-background-dark border-t border-stone-200 dark:border-stone-800">
+<button class="w-full h-14 rounded-xl bg-primary text-white font-bold text-base tracking-wide">
+                Update Cart
+            </button>
+</footer>
+</div>
+
+</body></html>

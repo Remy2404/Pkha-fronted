@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka E-commerce App - Ingredients</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-100">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4 border-b border-zinc-200 dark:border-zinc-800">
+<button class="p-2 -ml-2">
+<svg class="text-zinc-900 dark:text-zinc-100" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">Ingredients</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="px-4 py-6 space-y-8">
+<section>
+<h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Key Ingredients</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDStmoiI0M8Rc_vne2uoE2debsqEAYQZLnUHVS6s1RlQCM1P1wVn2B-RLDJo_tPkZbuCsJwU2lpZZfegg23nDLpalKfH-x28P8foRH8cEi7ZRY_5d7THt2BDtFqj98MfOrsFm0d72DHiBQR4sC1nDoXjEzEKFrTXFRA-CzDfSYT3y6KB9XowV4KkK5HE-JHHsMjuDxGXzXYftDL9dZkP87faRd5Ex8YmdTv_9-yHp6Blp3OFany2t31cEUUzuZlyuJvQ8tYgFVN2Ts");'></div>
+<div>
+<p class="font-semibold text-zinc-900 dark:text-zinc-100">Green Tea Extract</p>
+<p class="text-sm text-primary">Antioxidant, Anti-inflammatory</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD53y-O9vGUankaTkiRbLaXbFcdfxNoGPW2BTanvpDZjcjRanzbMub5AypjK_pYlvxZBDRdkjnh3CMwV16rd5Rg3rKVBSshudPDi2d2io74DEmt9zoPdMwCll5jYXZ7rQvCxQxg1Z2gkFo--fVWj9-IrHoc3T8dUV8oJbPeT2JiuD2UaYCFJ4reX0tJYwlZCZqkr47hGhDX-EXAb69w8zz2tE-E1PxgRsv0EoMwxW_HbT66bxV_pPYDtJceMFLYVFWA0qfkK8nFvYM");'></div>
+<div>
+<p class="font-semibold text-zinc-900 dark:text-zinc-100">Aloe Vera</p>
+<p class="text-sm text-primary">Moisturizing, Soothing</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTcj-IoKcEonOfZ8DgkLsXW9caEyw_6K4xLBDQcwyzbWgY8X_V7R4lQd22TFhMbORlDEAMMZYFpESvYaF-BF8yg_aPhcnLkfz663QFlDg0gigL_HQF55tuvZxMGj478xX2JC9yo-XFWqvcS93ZWF7k1eRrwW9xerOY4-886MeuecMrfpin4O6tu9EgVnD2VlhryehxoA6R12EpiLTWZiCCh2kqg118Qanecxxi5OeZgLT357mN0_SLWdiTQhRk9cerpYa2_bW8dQY");'></div>
+<div>
+<p class="font-semibold text-zinc-900 dark:text-zinc-100">Ceramides</p>
+<p class="text-sm text-primary">Hydrating, Barrier Repair</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Full Ingredient List</h2>
+<p class="text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+            Water, Glycerin, Butylene Glycol, Camellia Sinensis Leaf Extract, Aloe Barbadensis Leaf Juice, Ceramide NP, Sodium Hyaluronate, Panthenol, Allantoin, Tocopherol, Caprylic/Capric Triglyceride, Hydrogenated Lecithin, Phytosterols, Carbomer, Arginine, Phenoxyethanol, Ethylhexylglycerin
+          </p>
+</section>
+<section>
+<h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Safety Information</h2>
+<p class="text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+            For external use only. Avoid contact with eyes. If irritation occurs, discontinue use. Keep out of reach of children.
+          </p>
+</section>
+</div>
+</main>
+<nav class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-zinc-200 dark:border-zinc-800">
+<div class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400 p-2" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path>
+</svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary p-2 rounded-full bg-primary/20" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400 p-2" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400 p-2" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

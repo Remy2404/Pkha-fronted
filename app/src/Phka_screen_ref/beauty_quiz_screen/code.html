@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beauty Quiz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                        "foreground-light": "#1b0d14",
+                        "foreground-dark": "#f8f6f7",
+                        "subtle-light": "#e7cfdb",
+                        "subtle-dark": "#392530"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .group:has(:checked) {
+            border-color: #ec1380;
+            background-color: #ec13801a;
+        }
+        .group:has(:checked) .group-hover\:text-primary {
+            color: #ec1380;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 py-3">
+<div class="flex items-center justify-between">
+<button class="p-2 -ml-2">
+<svg class="h-6 w-6 text-foreground-light dark:text-foreground-dark" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">Beauty Quiz</h1>
+<div class="w-6"></div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 py-6">
+<div class="mb-6">
+<p class="text-sm font-medium text-foreground-light/70 dark:text-foreground-dark/70 mb-2">Question 1 of 5</p>
+<div class="w-full bg-subtle-light dark:bg-subtle-dark rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<h2 class="text-3xl font-bold mb-6 text-foreground-light dark:text-foreground-dark">What's your skin type?</h2>
+<div class="grid grid-cols-2 gap-4">
+<label class="group relative flex items-center justify-center p-4 h-24 rounded-lg border-2 border-subtle-light dark:border-subtle-dark cursor-pointer transition-all duration-200 hover:border-primary/50 dark:hover:border-primary/50" for="normal">
+<input class="absolute opacity-0 h-0 w-0" id="normal" name="skin_type" type="radio"/>
+<span class="text-base font-semibold text-foreground-light dark:text-foreground-dark group-hover:text-primary transition-colors">Normal</span>
+</label>
+<label class="group relative flex items-center justify-center p-4 h-24 rounded-lg border-2 border-subtle-light dark:border-subtle-dark cursor-pointer transition-all duration-200 hover:border-primary/50 dark:hover:border-primary/50" for="oily">
+<input class="absolute opacity-0 h-0 w-0" id="oily" name="skin_type" type="radio"/>
+<span class="text-base font-semibold text-foreground-light dark:text-foreground-dark group-hover:text-primary transition-colors">Oily</span>
+</label>
+<label class="group relative flex items-center justify-center p-4 h-24 rounded-lg border-2 border-subtle-light dark:border-subtle-dark cursor-pointer transition-all duration-200 hover:border-primary/50 dark:hover:border-primary/50" for="dry">
+<input class="absolute opacity-0 h-0 w-0" id="dry" name="skin_type" type="radio"/>
+<span class="text-base font-semibold text-foreground-light dark:text-foreground-dark group-hover:text-primary transition-colors">Dry</span>
+</label>
+<label class="group relative flex items-center justify-center p-4 h-24 rounded-lg border-2 border-subtle-light dark:border-subtle-dark cursor-pointer transition-all duration-200 hover:border-primary/50 dark:hover:border-primary/50" for="combination">
+<input class="absolute opacity-0 h-0 w-0" id="combination" name="skin_type" type="radio"/>
+<span class="text-base font-semibold text-foreground-light dark:text-foreground-dark group-hover:text-primary transition-colors">Combination</span>
+</label>
+<label class="group relative flex items-center justify-center p-4 h-24 rounded-lg border-2 border-subtle-light dark:border-subtle-dark cursor-pointer transition-all duration-200 hover:border-primary/50 dark:hover:border-primary/50 col-span-2" for="sensitive">
+<input class="absolute opacity-0 h-0 w-0" id="sensitive" name="skin_type" type="radio"/>
+<span class="text-base font-semibold text-foreground-light dark:text-foreground-dark group-hover:text-primary transition-colors">Sensitive</span>
+</label>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 py-4">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg text-base hover:bg-primary/90 transition-colors duration-300 disabled:bg-subtle-light disabled:dark:bg-subtle-dark disabled:cursor-not-allowed">
+                    Next
+                </button>
+</div>
+</footer>
+</div>
+
+</body></html>

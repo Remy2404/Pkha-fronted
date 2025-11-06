@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka Community Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+            "content-light": "#1b0d14",
+            "content-dark": "#f8f6f7",
+            "subtle-light": "#9a4c73",
+            "subtle-dark": "#c1a5b4",
+            "surface-light": "#f3e7ed",
+            "surface-dark": "#3a212e"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .icon-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="relative flex min-h-screen w-full flex-col justify-between">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4">
+<div class="w-10"></div>
+<h1 class="flex-1 text-center text-lg font-bold">Community</h1>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark text-content-light dark:text-content-dark">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+</div>
+<div class="border-b border-surface-light dark:border-surface-dark">
+<div class="flex px-4">
+<a class="flex-1 border-b-2 border-primary py-3 text-center text-sm font-bold text-primary" href="#">For You</a>
+<a class="flex-1 border-b-2 border-transparent py-3 text-center text-sm font-bold text-subtle-light dark:text-subtle-dark" href="#">Following</a>
+</div>
+</div>
+</header>
+<main class="divide-y divide-surface-light dark:divide-surface-dark">
+<article class="p-4">
+<div class="flex items-start gap-4">
+<img alt="Sophia Carter avatar" class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX5lEcyuFKoRzeq8lXIf3fQ8obPonS0TkosLm1v14QEKQU1z9ax7zDaNZXuXwd3365HrxZu1ouiH7k7dDjP-MdME8j4CYyoJFPBSa2VPx1Ct57f-O3pJlMh0Ajk9LPmjRRCSTyaaj1xQN21jPEyXFIwm_ldoEub7VxC-4XPE0fc5oW-J0yIzbmaaWR8OPTHineQaVlPeQY4JVBKmruvsj3azt-Niks5NID-evmEarNdwAS4J1qw9qMAY1Nvya7YrW4OqYeLb02f34"/>
+<div class="flex-1">
+<p class="font-bold">Sophia Carter</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2d ago</p>
+</div>
+</div>
+<p class="mt-3">Get ready with me for a night out! This look is perfect for any occasion. <span class="text-primary">#makeup</span> <span class="text-primary">#nightout</span> <span class="text-primary">#beauty</span></p>
+<div class="mt-3 aspect-w-16 aspect-h-9">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuLh3L1kHgS36Kx-50JOMZYiDvWBfMfI8yX8INR2cm2P77-Xw_Ja6aOEnem1AcfpH_syqQ_byuXILlBc0q8QCjJFbxS9FOd-oLNNL7t3Z1p0SACPkeS73-3K1RPltHR93ZC5Z1aAl5qsaeYT9Rx3F4TYx7I3Z9vNmSBNOfFLwoJ0WqwRCRTeRuDMq6MjeGsZWWQwNP6BsCgfveo95a4cKL6gxtWur5fC9tkpRxHKypTpBKiAClxwDY3bx2LBIw8zWgUZGCcyY4z9U");'></div>
+</div>
+<div class="mt-3 flex items-center justify-between text-subtle-light dark:text-subtle-dark">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5">
+<svg class="text-primary" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M240 94c0 70-103.79 126.66-108.21 129a8 8 0 0 1-7.58 0C119.79 220.66 16 164 16 94a62.07 62.07 0 0 1 62-62c20.65 0 38.73 8.88 50 23.89C139.27 40.88 157.35 32 178 32a62.07 62.07 0 0 1 62 62Z" fill="currentColor"></path>
+</svg>
+<span class="text-sm font-medium">234</span>
+</button>
+<button class="flex items-center gap-1.5">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path>
+</svg>
+<span class="text-sm font-medium">12</span>
+</button>
+</div>
+<button>
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z"></path>
+</svg>
+</button>
+</div>
+</article>
+<article class="p-4">
+<div class="flex items-start gap-4">
+<img alt="Olivia Bennett avatar" class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCACfbPZt5G01EDkgeEIjOVNmFPxfEUpcU_1QYiA5lC8ixEJHF2z-icyBs9SQB9MHbVN-GoPfmXvUMwasyMJ2OjHfsQevH9xTPeXojteZhoOxn_-NoN9h51Q8Z-JAvXxOCn4DX6FQV1FNBsiDGxEM3jAbR3yg-NiKpsdIl16AxL6qkAirxWDXwkVeI4XeRvGqwWtdXK-V7-ox_wAz5fkeYq2dt5qxxFqx7pB_cySO67K-uyf199fJkllh3cEDvyRN35fq_iprf5ivA"/>
+<div class="flex-1">
+<p class="font-bold">Olivia Bennett</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">1d ago</p>
+</div>
+</div>
+<p class="mt-3">My skincare routine for achieving that perfect glow! <span class="text-primary">#skincare</span> <span class="text-primary">#glowingskin</span> <span class="text-primary">#beauty</span></p>
+<div class="mt-3 aspect-w-16 aspect-h-9">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAttt3tHrjzsjUJYDwbZF-rAAHnKopnSa8yLxzBAL4_SR-DjoEUkGMX_ST7WnYQpJzDURbUhmFqdQXiO2WzeMSds7xvU75kGmpNAxskH5MkWNuCF3XFr-SKFSummw9HtKWnk4Tj9A4k1E3bJGZglrKnB4-EZ3HuBWTmR5utvOMSn4bGUgMG89xM8UfBJONdZrOcE1QxX7N5mR4E6DiCl35JjSsmLQRlbYHMM0Kj9UrWHpbo8ST992MNZC1va45tZzYGAafL1iamulM");'></div>
+</div>
+<div class="mt-3 flex items-center justify-between text-subtle-light dark:text-subtle-dark">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+<span class="text-sm font-medium">189</span>
+</button>
+<button class="flex items-center gap-1.5">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path>
+</svg>
+<span class="text-sm font-medium">25</span>
+</button>
+</div>
+<button>
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z"></path>
+</svg>
+</button>
+</div>
+</article>
+<section class="p-4">
+<h2 class="text-lg font-bold">Trending</h2>
+<div class="mt-3 flex flex-wrap gap-2">
+<button class="rounded-full bg-surface-light dark:bg-surface-dark px-4 py-1.5 text-sm font-medium text-content-light dark:text-content-dark">#SummerMakeup</button>
+<button class="rounded-full bg-surface-light dark:bg-surface-dark px-4 py-1.5 text-sm font-medium text-content-light dark:text-content-dark">#NewArrivals</button>
+<button class="rounded-full bg-surface-light dark:bg-surface-dark px-4 py-1.5 text-sm font-medium text-content-light dark:text-content-dark">#SkincareTips</button>
+<button class="rounded-full bg-surface-light dark:bg-surface-dark px-4 py-1.5 text-sm font-medium text-content-light dark:text-content-dark">#BeautyHacks</button>
+<button class="rounded-full bg-surface-light dark:bg-surface-dark px-4 py-1.5 text-sm font-medium text-content-light dark:text-content-dark">#MakeupTutorial</button>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 border-t border-surface-light dark:border-surface-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm pb-safe">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<svg class="icon-filled" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z" fill="currentColor"></path>
+</svg>
+<span class="text-xs font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-subtle-light dark:text-subtle-dark" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+<span class="text-xs font-medium">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-subtle-light dark:text-subtle-dark" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+</svg>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-subtle-light dark:text-subtle-dark" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

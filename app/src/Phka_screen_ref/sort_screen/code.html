@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sort Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .switch-toggle {
+            transition: background-color 0.2s ease-in-out, justify-content 0.2s ease-in-out;
+        }
+        .switch-handle {
+            transition: transform 0.2s ease-in-out;
+        }
+        input:checked + .switch-toggle .switch-handle {
+            transform: translateX(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen justify-between">
+<div>
+<header class="flex items-center p-4">
+<button class="text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-gray-900 dark:text-gray-100 pr-8">Sort</h1>
+</header>
+<main class="mt-2">
+<form>
+<div class="space-y-2">
+<div class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark">
+<label class="text-base text-gray-900 dark:text-gray-100 flex-1" for="relevance">Relevance</label>
+<div class="flex items-center">
+<input checked="" class="hidden" id="relevance" name="sort-option" type="radio"/>
+<label class="w-12 h-7 rounded-full bg-primary/20 dark:bg-primary/30 p-1 flex items-center cursor-pointer switch-toggle" for="relevance">
+<span class="w-5 h-5 bg-white rounded-full shadow-md switch-handle"></span>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark">
+<label class="text-base text-gray-900 dark:text-gray-100 flex-1" for="price-low-high">Price (Low to High)</label>
+<div class="flex items-center">
+<input class="hidden" id="price-low-high" name="sort-option" type="radio"/>
+<label class="w-12 h-7 rounded-full bg-gray-300 dark:bg-gray-700 p-1 flex items-center cursor-pointer switch-toggle peer-checked:bg-primary" for="price-low-high">
+<span class="w-5 h-5 bg-white rounded-full shadow-md switch-handle"></span>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark">
+<label class="text-base text-gray-900 dark:text-gray-100 flex-1" for="price-high-low">Price (High to Low)</label>
+<div class="flex items-center">
+<input class="hidden" id="price-high-low" name="sort-option" type="radio"/>
+<label class="w-12 h-7 rounded-full bg-gray-300 dark:bg-gray-700 p-1 flex items-center cursor-pointer switch-toggle peer-checked:bg-primary" for="price-high-low">
+<span class="w-5 h-5 bg-white rounded-full shadow-md switch-handle"></span>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark">
+<label class="text-base text-gray-900 dark:text-gray-100 flex-1" for="rating">Rating</label>
+<div class="flex items-center">
+<input class="hidden" id="rating" name="sort-option" type="radio"/>
+<label class="w-12 h-7 rounded-full bg-gray-300 dark:bg-gray-700 p-1 flex items-center cursor-pointer switch-toggle peer-checked:bg-primary" for="rating">
+<span class="w-5 h-5 bg-white rounded-full shadow-md switch-handle"></span>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark">
+<label class="text-base text-gray-900 dark:text-gray-100 flex-1" for="newest">Newest</label>
+<div class="flex items-center">
+<input class="hidden" id="newest" name="sort-option" type="radio"/>
+<label class="w-12 h-7 rounded-full bg-gray-300 dark:bg-gray-700 p-1 flex items-center cursor-pointer switch-toggle peer-checked:bg-primary" for="newest">
+<span class="w-5 h-5 bg-white rounded-full shadow-md switch-handle"></span>
+</label>
+</div>
+</div>
+</div>
+</form>
+</main>
+</div>
+<div class="p-4 bg-background-light dark:bg-background-dark">
+<button class="w-full h-12 px-5 bg-primary text-white text-base font-bold rounded-xl shadow-lg">
+                Apply
+            </button>
+</div>
+</div>
+<script>
+        // Script to handle radio button behavior for switches
+        const radioButtons = document.querySelectorAll('input[type="radio"][name="sort-option"]');
+        const switchLabels = document.querySelectorAll('.switch-toggle');
+        function updateSwitches() {
+            radioButtons.forEach(radio => {
+                const label = radio.nextElementSibling;
+                if (radio.checked) {
+                    label.classList.add('bg-primary');
+                    label.classList.remove('bg-gray-300', 'dark:bg-gray-700', 'bg-primary/20', 'dark:bg-primary/30');
+                    label.firstElementChild.style.transform = 'translateX(20px)';
+                } else {
+                    label.classList.remove('bg-primary');
+                    label.classList.add('bg-gray-300', 'dark:bg-gray-700');
+                    label.firstElementChild.style.transform = 'translateX(0px)';
+                }
+            });
+        }
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateSwitches);
+        });
+        // Initial state update
+        updateSwitches();
+    </script>
+
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                        "text-light": "#1b0d14",
+                        "text-dark": "#f8f6f7",
+                        "subtle-light": "#f3e7ed",
+                        "subtle-dark": "#442032",
+                        "secondary-light": "#9a4c73",
+                        "secondary-dark": "#d19db9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark">arrow_back</span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center text-text-light dark:text-text-dark">Contact Us</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow px-4 pt-6 pb-8">
+<h2 class="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">How can we help?</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-subtle-dark/50 rounded-lg">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-full bg-subtle-light dark:bg-subtle-dark">
+<span class="material-symbols-outlined text-primary">phone</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-text-light dark:text-text-dark">Phone</p>
+<a class="text-secondary-light dark:text-secondary-dark" href="tel:+15551234567">+1 (555) 123-4567</a>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-subtle-dark/50 rounded-lg">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-full bg-subtle-light dark:bg-subtle-dark">
+<span class="material-symbols-outlined text-primary">email</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-text-light dark:text-text-dark">Email</p>
+<a class="text-secondary-light dark:text-secondary-dark" href="mailto:support@phka.com">support@phka.com</a>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-subtle-dark/50 rounded-lg">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-full bg-subtle-light dark:bg-subtle-dark">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-text-light dark:text-text-dark">Business Hours</p>
+<p class="text-secondary-light dark:text-secondary-dark">Monday - Friday, 9 AM - 6 PM</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 bg-background-light dark:bg-background-dark">
+<button class="w-full h-12 px-5 text-base font-bold text-white bg-primary rounded-xl hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/30">
+                Send Message
+            </button>
+</footer>
+</div>
+
+</body></html>

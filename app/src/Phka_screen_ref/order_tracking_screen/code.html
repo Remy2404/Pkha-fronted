@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec1380",
+              "background-light": "#f8f6f7",
+              "background-dark": "#221019",
+            },
+            fontFamily: {
+              "display": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-black dark:text-white">
+<div class="flex h-full min-h-screen w-full flex-col">
+<header class="flex items-center justify-between p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Order Tracking</h1>
+<div class="h-10 w-10"></div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 pb-4">
+<section>
+<h2 class="text-xl font-bold">Order Status</h2>
+<div class="mt-4 space-y-2">
+<div class="relative flex gap-4">
+<div class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex-1 py-1.5">
+<p class="font-semibold">Order Placed</p>
+<p class="text-sm text-black/60 dark:text-white/60">June 15, 2024</p>
+</div>
+<div class="absolute left-5 top-10 h-full border-l-2 border-dashed border-primary"></div>
+</div>
+<div class="relative flex gap-4">
+<div class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div class="flex-1 py-1.5">
+<p class="font-semibold">Shipped</p>
+<p class="text-sm text-black/60 dark:text-white/60">June 16, 2024</p>
+</div>
+<div class="absolute left-5 top-10 h-full border-l-2 border-dashed border-primary"></div>
+</div>
+<div class="flex gap-4">
+<div class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/30 dark:text-white">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<div class="flex-1 py-1.5">
+<p class="font-semibold text-black/60 dark:text-white/60">Delivered</p>
+<p class="text-sm text-black/60 dark:text-white/60">Awaiting delivery</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-8">
+<h2 class="text-xl font-bold">Tracking Information</h2>
+<div class="mt-4 rounded-lg bg-background-light-soft dark:bg-background-dark-soft p-4">
+<div class="space-y-4">
+<div class="flex justify-between">
+<p class="text-black/60 dark:text-white/60">Tracking Number</p>
+<p class="font-semibold">1Z999AA1234567890</p>
+</div>
+<div class="flex justify-between">
+<p class="text-black/60 dark:text-white/60">Carrier</p>
+<p class="font-semibold">FedEx</p>
+</div>
+<div class="flex justify-between">
+<p class="text-black/60 dark:text-white/60">Estimated Delivery</p>
+<p class="font-semibold">June 18, 2024</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-8">
+<h2 class="text-xl font-bold">Order Details</h2>
+<div class="mt-4 space-y-4">
+<div class="flex items-center gap-4">
+<div class="h-16 w-16 rounded-lg bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW0WB2XOhU5Gun_InAHp8pdjQc1gR9ksonYwE-O__WE7tiFgytqSY8sduci2Gh4DxfxKlFjMYvsspu1llwGIqKKIkLHHu5DCQ3kw_je2Fn4cJosFBKPeQ7NMaB-vcJHMZaL1Tv_GCbZukWjpkvPkyhW1EdP3aMB2SWtMdTlqJ8NSzr1ZBsOLjnn3nsHPTuaMkmOKa-dxKnDgIgCD_ohd_gbitN2QoN-Jhu2Y-o8EJJf8X21r3cFD34BDMOXgQ53JuaMXW4P-1FrH4')"></div>
+<div>
+<p class="font-semibold">Radiant Glow Serum</p>
+<p class="text-sm text-black/60 dark:text-white/60">Quantity: 1</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-16 w-16 rounded-lg bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW0WB2XOhU5Gun_InAHp8pdjQc1gR9ksonYwE-O__WE7tiFgytqSY8sduci2Gh4DxfxKlFjMYvsspu1llwGIqKKIkLHHu5DCQ3kw_je2Fn4cJosFBKPeQ7NMaB-vcJHMZaL1Tv_GCbZukWjpkvPkyhW1EdP3aMB2SWtMdTlqJ8NSzr1ZBsOLjnn3nsHPTuaMkmOKa-dxKnDgIgCD_ohd_gbitN2QoN-Jhu2Y-o8EJJf8X21r3cFD34BDMOXgQ53JuaMXW4P-1FrH4')"></div>
+<div>
+<p class="font-semibold">Hydrating Face Mask</p>
+<p class="text-sm text-black/60 dark:text-white/60">Quantity: 2</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="sticky bottom-0 border-t border-primary/20 bg-background-light dark:border-primary/30 dark:bg-background-dark">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 p-2 text-black/60 dark:text-white/60" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-black/60 dark:text-white/60" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-xs">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 rounded-full bg-primary/10 p-2 text-primary dark:bg-primary/20 dark:text-white" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-black/60 dark:text-white/60" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

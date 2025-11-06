@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka E-commerce App</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex flex-col min-h-screen w-full justify-between">
+<main class="flex-grow">
+<header class="flex items-center p-4 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<button class="text-neutral-900 dark:text-neutral-100 p-2 -ml-2">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-neutral-900 dark:text-neutral-100 flex-1 text-center">Makeup</h1>
+<div class="w-8"></div> 
+</header>
+<div class="px-4 pb-4 border-b border-primary/10 dark:border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<p class="text-sm font-medium text-neutral-700 dark:text-neutral-300">120 items</p>
+<div class="flex items-center gap-2">
+<button class="text-neutral-700 dark:text-neutral-300 p-1">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="text-neutral-400 dark:text-neutral-500 p-1">
+<span class="material-symbols-outlined">view_list</span>
+</button>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4">
+<button class="flex items-center justify-center gap-x-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-neutral-900 dark:text-neutral-100 px-4 py-2 text-sm font-medium whitespace-nowrap">
+<span>Sort</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center justify-center gap-x-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-neutral-900 dark:text-neutral-100 px-4 py-2 text-sm font-medium whitespace-nowrap">
+<span>Price</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center justify-center gap-x-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-neutral-900 dark:text-neutral-100 px-4 py-2 text-sm font-medium whitespace-nowrap">
+<span>Brand</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center justify-center gap-x-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-neutral-900 dark:text-neutral-100 px-4 py-2 text-sm font-medium whitespace-nowrap">
+<span>Rating</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-2">
+<div class="relative w-full aspect-square">
+<div class="w-full h-full bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCU7IqJeCHa3ZE_dl2MMva-Xy_xPHGXSgr2Iyf9ZB4iGbF8uX5p7sG3f1i191yNWKZkLMfGMScrBpCEie9E1f6uOhoXEbP9yN6mcA5ZRDRdqhYRi_MOoHC8VAfWy-QoFadwVls_XlI40Bb-m-goQ5NrBJGS-Kv-2e5GDmb5eQfIpK5MiNSnMsaR2XUnQFWiNm4VuFFREGPMfHqO4JAJG2M9NLepzYjYCk5Joskep09WrW4JO9U8OWKQFO31UwoorTKzFRQxWLT77kw");'></div>
+<button class="absolute top-2 right-2 bg-white/70 dark:bg-black/50 p-1.5 rounded-full text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-neutral-900 dark:text-neutral-100 text-sm">Radiant Glow Foundation</h3>
+<div class="flex items-center justify-between mt-1">
+<p class="text-sm font-medium text-primary">$35.00</p>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-yellow-500 text-base">star</span>
+<p class="text-xs text-neutral-600 dark:text-neutral-400">4.5</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="relative w-full aspect-square">
+<div class="w-full h-full bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpXCT8euDsxtbGFpRq4T6pfh9lQMKnUVFijVUF12GJVmzY4gmthvmEZsledMIuhbGX9dUWVO1Hd_urUwcrqOUEjdjNKwmUdCf6wqccTHAE9PdBnO5wJ84TQpqhVpiHrNY8EIJXMoLqBWhZni2IzliuCzQJKw8ys_2t0EqM7U1NMRgISgyX9ukQ6e57JoAO7gpSxeZA2qlATyWnPej0UUEUX6eqLDIPRSHdKFzdpYQFMpZ94j72D8fepCEtHk-G8wAUasWUQs7WVk0");'></div>
+<button class="absolute top-2 right-2 bg-white/70 dark:bg-black/50 p-1.5 rounded-full text-neutral-400 dark:text-neutral-500">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-neutral-900 dark:text-neutral-100 text-sm">Velvet Matte Lipstick</h3>
+<div class="flex items-center justify-between mt-1">
+<p class="text-sm font-medium text-primary">$22.00</p>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-yellow-500 text-base">star</span>
+<p class="text-xs text-neutral-600 dark:text-neutral-400">4.2</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="relative w-full aspect-square">
+<div class="w-full h-full bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDelMs9g5GiF2JTKKlWSuZmIe8VUa-CERaTsvhcuUQSNWCD-b2wVprdCKTIfb88b6x0dVfGT5a627zTz4awDATVsiFQ6-gECilc-K46KvfWodw3KhyEt55kfcwmAqr5VBILDrA-bMdXTzUTypGX4CkdE0eDREJTeTiQDA8CX0NRVuddKf-scbxkESyiTr60XzfdTUcv_92eHGVW2Yy1Kb4GAtJl8626ZhBlsjt7fX_xfC4E1j8Vdq89pJnaMCOMTIWxVqye6l6F_LI");'></div>
+<button class="absolute top-2 right-2 bg-white/70 dark:bg-black/50 p-1.5 rounded-full text-neutral-400 dark:text-neutral-500">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-neutral-900 dark:text-neutral-100 text-sm">Ethereal Eyeshadow Palette</h3>
+<div class="flex items-center justify-between mt-1">
+<p class="text-sm font-medium text-primary">$48.00</p>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-yellow-500 text-base">star</span>
+<p class="text-xs text-neutral-600 dark:text-neutral-400">4.7</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="relative w-full aspect-square">
+<div class="w-full h-full bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAccDbIJp1rrIpmOGbfPW8mky7bGXKJFGHXw6Cr7PTjo6zpv08BFjTCT3X_K1aTGMyPRWZbX96fVQib17LGPMVZsLW64A0_rTUtb81dJk-LLTKKZsX6qkBrsu3bs-vvhUyk-JJnfKwcaKVDjnuq6qZQxruLb5Jo2fTFqf57KH6Gxz-RnCYdLZoHpqq-yV1xm6iceAoJoN63lleoEJo4iv7dVF3AJUSj4uqDjCP8pfRxOuJmtlY4x9SbNg3jE0if8G6i8my8UqZvCdg");'></div>
+<button class="absolute top-2 right-2 bg-white/70 dark:bg-black/50 p-1.5 rounded-full text-neutral-400 dark:text-neutral-500">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-neutral-900 dark:text-neutral-100 text-sm">Sculpt &amp; Define Contour Kit</h3>
+<div class="flex items-center justify-between mt-1">
+<p class="text-sm font-medium text-primary">$30.00</p>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-yellow-500 text-base">star</span>
+<p class="text-xs text-neutral-600 dark:text-neutral-400">4.3</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="relative w-full aspect-square">
+<div class="w-full h-full bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAMCYYjwY08CCjhH_1XpVGaJbhirSby4ynwKWOvibRElkX1slnDCwXkCNuMFf8JUUoJeTM3ZDZmsSZdTMm97HmME-3unEtEKPe4WGkDApRUSHlCouyMdbhVVSfxzPXud1TQD2nfv-l1utpNAECjETe76uve6p-XnmcNlta7zMdZHuL9fcWBNOsdT4bVo5fhnJYusUqEvZjJC_ALVJCH73WS2p734ivBpT8EUVgGfRqF7jPsw7vQczWk7vtoHTgq5JzvWdNDg2yRSQ");'></div>
+<button class="absolute top-2 right-2 bg-white/70 dark:bg-black/50 p-1.5 rounded-full text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-neutral-900 dark:text-neutral-100 text-sm">Luminous Highlighter Duo</h3>
+<div class="flex items-center justify-between mt-1">
+<p class="text-sm font-medium text-primary">$28.00</p>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-yellow-500 text-base">star</span>
+<p class="text-xs text-neutral-600 dark:text-neutral-400">4.6</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="relative w-full aspect-square">
+<div class="w-full h-full bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDO7-rAo4uwO537_D8C5YTcFlaLDGm0Wb6So9dVOcIZ5J7ZsF7oAOmUKooA0yQcgo6OBPzgtCer6gJp0EXCY6DhlqrKaSuY3aqY9WlY-KVyBi_IIyb4lVsGIIaYpk1ak_LaLpsU5_IbEbV0TotzFlgJFLEzCoJfqAd_q90PSbSvdzrA_n7SPx2FV1fRpnSGX4ayzWkHFz6NJgo9Bf8M_rEhTJ61UgQkZDC4TQYiijRz9eja_w9tV_4oEYQ3PZq_plYJndbWvn3j6hY");'></div>
+<button class="absolute top-2 right-2 bg-white/70 dark:bg-black/50 p-1.5 rounded-full text-neutral-400 dark:text-neutral-500">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div>
+<h3 class="font-bold text-neutral-900 dark:text-neutral-100 text-sm">Precision Brow Pencil</h3>
+<div class="flex items-center justify-between mt-1">
+<p class="text-sm font-medium text-primary">$18.00</p>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-yellow-500 text-base">star</span>
+<p class="text-xs text-neutral-600 dark:text-neutral-400">4.4</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/10 dark:border-primary/20">
+<nav class="flex justify-around items-center px-2 py-2">
+<a class="flex flex-col items-center gap-1 text-neutral-500 dark:text-neutral-400 w-1/4" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary w-1/4" href="#">
+<div class="bg-primary text-white rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</div>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-500 dark:text-neutral-400 w-1/4" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-500 dark:text-neutral-400 w-1/4" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

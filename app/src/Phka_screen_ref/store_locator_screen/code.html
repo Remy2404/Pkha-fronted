@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center justify-between p-4">
+<button class="p-2 -m-2">
+<span class="material-symbols-outlined text-gray-900 dark:text-gray-100">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-gray-100">Store Locator</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="p-4 space-y-6">
+<div class="relative">
+<input class="w-full pl-12 pr-4 py-3 bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary placeholder-gray-500 dark:placeholder-gray-400" placeholder="Search for a location" type="search"/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">search</span>
+</div>
+<button class="absolute inset-y-0 right-0 flex items-center pr-4 text-primary">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<div class="aspect-[16/9] bg-gray-200 dark:bg-gray-700 rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXMA8BKM43MuPqOyIVOdlrVcNizfSe9CgZof1R36rW13yBweejkYeMC0UuIc-BeusyYqj5k3_k5da5h2b8UCyOA8wZT-gC3KogLzUsWgwFQ6AEGjJQLREMpHkc9mFoBpP18xhMiUyCmrY4c2MyROdurzY2f-8Umbiw8XQje0eWwH6eCV-TQkyRYLVGAZuS3I2ZowQvBy1ccgp5b47gA1wBLEDHSrqQ8ljnANIAzyzLNCgOyNi7fAuC1XxDTbbqd5QrSUEAOuT6rcU");'></div>
+<div>
+<h2 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">Nearby Stores</h2>
+<div class="space-y-2">
+<div class="p-4 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-gray-100">Phka - Union Square</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">1.2 miles away</p>
+</div>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">Open until 8 PM</span>
+</div>
+<div class="p-4 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-gray-100">Phka - Mission District</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">2.5 miles away</p>
+</div>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">Open until 9 PM</span>
+</div>
+<div class="p-4 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-gray-100">Phka - Richmond District</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">3.8 miles away</p>
+</div>
+<span class="text-sm font-medium text-red-600 dark:text-red-400">Open until 7 PM</span>
+</div>
+<div class="p-4 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-between">
+<div>
+<p class="font-semibold text-gray-900 dark:text-gray-100">Phka - SOMA</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">4.1 miles away</p>
+</div>
+<span class="text-sm font-medium text-gray-500 dark:text-gray-400">Closed</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-xs font-medium">Stores</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

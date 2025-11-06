@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Options</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .not-available {
+      position: relative;
+      cursor: not-allowed;
+    }
+    .not-available::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      right: -5%;
+      border-top: 2px solid #e7cfdb;
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }.not-available:has(:checked)::after {
+      border-top-color: #ec1380;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-black/10 dark:border-white/10">
+<button class="text-gray-800 dark:text-gray-200">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white flex-1 text-center">Select Options</h1>
+<div class="w-6"></div>
+</header>
+<main class="flex-grow">
+<div class="aspect-[4/3] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCneQiWTpUPZIN3BxGp5rieVTounEE7Di2uTS65sCG1l0mxO_bSe3bbZSapUqix1y8PRY4mYX6X2llrmGM6ApN6ZlUhDMfpNTW2bZW3v4gA-_gbzqoZ-YfwtQSdt7eYZZKJZpcgAjSW4JDw49ymuWitzDLlGhbUDT3tNB2XOVZfGd2ynNgo50pn4G-2aWQDnHfUyk9cigbCWIkrcp4J8h7v_YM3WGwzuvqmANB6nDv7iGDNH5GOBeGLiN8k5VF65Nl1tiVNZ74rDCI");'></div>
+<div class="p-6 space-y-6">
+<div>
+<h2 class="text-base font-bold text-gray-900 dark:text-white mb-3">Size</h2>
+<div class="flex flex-wrap gap-3">
+<label class="relative cursor-pointer">
+<input checked="" class="sr-only" name="size" type="radio"/>
+<div class="px-5 py-2.5 rounded-lg border-2 border-primary bg-primary/10 dark:bg-primary/20 text-sm font-medium text-primary">
+                Small
+              </div>
+</label>
+<label class="relative cursor-pointer">
+<input class="sr-only" name="size" type="radio"/>
+<div class="px-5 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium hover:border-primary/50 dark:hover:border-primary/50">
+                Medium
+              </div>
+</label>
+<label class="relative cursor-pointer not-available">
+<input class="sr-only" disabled="" name="size" type="radio"/>
+<div class="px-5 py-2.5 rounded-lg border border-gray-200 dark:border-gray-800 text-gray-400 dark:text-gray-600 text-sm font-medium">
+                Large
+              </div>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-base font-bold text-gray-900 dark:text-white mb-3">Color</h2>
+<div class="flex flex-wrap gap-4">
+<label class="relative cursor-pointer">
+<input checked="" class="sr-only" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full ring-2 ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark ring-primary" style="background-color: #FFD700;"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="sr-only" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 hover:ring-2 hover:ring-primary/50" style="background-color: #0000FF;"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="sr-only" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 hover:ring-2 hover:ring-primary/50" style="background-color: #FF0000;"></div>
+</label>
+<label class="relative cursor-pointer not-available">
+<input class="sr-only" disabled="" name="color" type="radio"/>
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-800" style="background-color: #00FF00;"></div>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-base font-bold text-gray-900 dark:text-white mb-3">Quantity</h2>
+<div class="flex items-center justify-between p-3 rounded-lg bg-black/5 dark:bg-white/5">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Selected: 1</p>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 text-primary font-bold text-lg">-</button>
+<span class="w-8 text-center font-medium text-gray-900 dark:text-white">1</span>
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 dark:bg-primary/30 text-primary font-bold text-lg">+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10 sticky bottom-0">
+<button class="w-full h-12 px-6 rounded-xl bg-primary text-white font-bold text-base tracking-wide shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+        Add to Cart
+      </button>
+</footer>
+</div>
+
+</body></html>

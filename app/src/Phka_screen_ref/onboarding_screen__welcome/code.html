@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="flex flex-col h-screen bg-background-light dark:bg-background-dark font-display text-stone-900 dark:text-stone-100">
+<header class="flex items-center justify-between p-4">
+<h1 class="text-lg font-bold text-center flex-1 text-stone-900 dark:text-stone-100">Phka</h1>
+<div class="w-12 flex justify-end">
+<button class="text-stone-900 dark:text-stone-100">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+</button>
+</div>
+</header>
+<main class="flex flex-col flex-grow items-center justify-center px-4 text-center">
+<div class="w-full max-w-sm">
+<div class="aspect-[2/3] w-full bg-cover bg-center rounded-xl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1Y_tmXKLHrKU1Lp1v0eMNvKXGTZdzyHjl5FFXTrs6x3kEwWsjFll4B1GpaWRawK95U1iex9TR_Z9f3DjsIejZ_HR5NQBovesyTXA76Xe7wnWAjvNDp5sPu2I9Y4FCegw-j6BJ-01vT6l22rAIhs_AWDiVes5y6_VuIDoLJZfz0n7EpYINeCayO20KncbG_rXitdAMiDHXEUJf4fVyeHzO3YwO9CZiZGGdhtyWiya3CbQwJqcXemq0GhCJ13_IkPnUktXdfyfwlwY');"></div>
+</div>
+<div class="mt-8">
+<h2 class="text-3xl font-bold text-stone-900 dark:text-stone-100">Welcome</h2>
+<p class="mt-2 text-base text-stone-600 dark:text-stone-300">Discover beauty, simplified. Your journey to radiant skin starts here.</p>
+</div>
+</main>
+<footer class="p-4 space-y-4">
+<div class="flex justify-center items-center gap-3">
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+<div class="w-2.5 h-2.5 bg-primary/20 rounded-full"></div>
+<div class="w-2.5 h-2.5 bg-primary/20 rounded-full"></div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-3 text-sm font-bold bg-primary/10 dark:bg-primary/20 text-primary rounded-lg">Skip</button>
+<button class="flex-1 py-3 text-sm font-bold text-white bg-primary rounded-lg">Next</button>
+</div>
+</footer>
+</div>
+
+</body></html>

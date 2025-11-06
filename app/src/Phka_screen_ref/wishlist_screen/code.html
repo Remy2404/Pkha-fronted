@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec1380",
+              "background-light": "#f8f6f7",
+              "background-dark": "#221019",
+            },
+            fontFamily: {
+              "display": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen flex-col">
+<header class="flex-shrink-0">
+<div class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark">
+<button class="flex items-center justify-center w-10 h-10 text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center text-gray-900 dark:text-white">Wishlist</h1>
+<div class="w-10"></div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="p-4">
+<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+<div class="space-y-2">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKKhNacE4bGhjrvdANLrMTb6uuq0K7nnTzmd44f2EOcubFhFZEOZmzj7rT5zQNf0wSplYvvpMuvN5jOlvNOYMV2FbdqPFxt5IIh1SN4g8G5KzX70QVRfQ9sULVLstR1PAi_qKV11jp-Xw41dqtNMBcqxVH59dJf_sJeCy4-Ja0ONGWijYSfd8_JpLU6E96F-7OuKEdamr8IhZSz9sqKoothbclm9PZX3G5_Tg-mnNg1oKGQx5g3wEweHbAf0nWFUj-qi1DNZ2zbXc");'></div>
+<button class="absolute top-2 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-black/50 text-primary">
+<span class="material-symbols-outlined"> favorite </span>
+</button>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-200">Radiant Glow Serum</p>
+<p class="font-bold text-gray-900 dark:text-white">$29.99</p>
+</div>
+<div class="space-y-2">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNIiH5SLeRnjoY8RxzpwCEIxuNgD16NSSboluAisvGOsG6K4DmORdVSnDMMGPT-9EZKrpeqltJB7VNPZDDLohYpQgeFHWjOSc5klPWANV2s4QE0VOsiPrdA7tFtLvME4YNldUuidSUTS_tqLji5kTViT-5lYrj5-_lxjJJM91IGuobHDplwyquQvGXg0S41xz6tFBvNXw51tB9W0Fp-rmJHkxPk2WvSx-aGr3_2kkispaVFr9xE4eQv3YbY--S-cQGu9oZesAo1r4");'></div>
+<button class="absolute top-2 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-black/50 text-primary">
+<span class="material-symbols-outlined"> favorite </span>
+</button>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-200">Hydrating Lip Balm</p>
+<p class="font-bold text-gray-900 dark:text-white">$9.50</p>
+</div>
+<div class="space-y-2">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiV9rP9gC3WynXIWvitLpbKuBruAVA9tNzWRgouT5oQhCmZJ9skA1A4Re4bsm6pMsjYYzxAA_Mv2XO6q3H7nmhbpM85lyDYgvC_UU1ZjkGjnke6GXZbfyy3kiFy2EJz1Day73rVS6OGJcF8quA_EdsfMrcUtC6N4yv1BOkXpOOvBcLblYwjdaEduhjqW37ujzeE3cti05kI0stQ8nDc6NoIyVCkyPSxJmCZ0h6PS6SqAirTmnNV0AIwFL5JeWTCM4KWaJ0g0qUths");'></div>
+<button class="absolute top-2 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-black/50 text-primary">
+<span class="material-symbols-outlined"> favorite </span>
+</button>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-200">Nourishing Hair Mask</p>
+<p class="font-bold text-gray-900 dark:text-white">$24.00</p>
+</div>
+<div class="space-y-2">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-7tf62xsV5m2IOYGQbB6vI_mfjdL9-QUWAmmkc0xsu1YtmllgcS3NZHnVw9yueQr8aur_yz7E33tsjGdoNaQ6BCSmks8gh60ySU1T0T1wrcESHZmm5VF5o33KrfAn1b3w0LY4ARwugLeAAcNLMPcLQfaAowrbGt8bLF_vhfNvjJ3QL8kug93Yuhm_hfvU8C2sj1iL_RmIPlbJCOk5asq5ViUzxrPVnrOYOraRDY8ia2Eacr7dMgGGfuRHGodyTGuOLwf7gfthN74");'></div>
+<button class="absolute top-2 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-black/50 text-primary">
+<span class="material-symbols-outlined"> favorite </span>
+</button>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-200">Gentle Cleansing Oil</p>
+<p class="font-bold text-gray-900 dark:text-white">$18.75</p>
+</div>
+<div class="space-y-2">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAfOqPqu3ChiOrin-OcsqFjt27xd16wZ_kLo7fyqMT45LOL3--5mjPQ8Sp9cgLYdWKR4Nhd6Ppxersw7sEKNuelX5qnmzRTRMhrYVFDk_FSzcQ8Ru-oyxTXnmp6Kg8iFMemjUONbUWia6uVKS5GtPBAu4eX4eiVPj-XbrtOoyxX5t12uFIem1Ta8ixFz8-gNiYVJv06Upiy3juCb8D-4XYcglwSHEiqAYV53_-r6t-koc0PrPKGM1Wsu08sSIOSaHuibst_Z__lOI");'></div>
+<button class="absolute top-2 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-black/50 text-primary">
+<span class="material-symbols-outlined"> favorite </span>
+</button>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-200">Soothing Eye Cream</p>
+<p class="font-bold text-gray-900 dark:text-white">$35.00</p>
+</div>
+<div class="space-y-2">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-square" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZeJgGhT1dO6UFrLG92lXRwBKi7SCySlItFk5bmlB4UZWhBVUCXoxK8h1hDAH09Z-xHt_Om21JL1PwemW0JNQ0N_EzD8CE5jWYwGJDnLV3y8MH8a9Ok-36u_x5RJ88zkJCW1NHyWSVj6UAKHWy14QF_5xSx1CeDprAjmzWxYpYU1OB-IDTNljHvEKqp9usFqhxaNBNTw26COzjZrRPEptKX9aUH4JhLZwatClozdRV6DEPWkKG9-D1LsD8x0P64Fxoih1qipfKVTg");'></div>
+<button class="absolute top-2 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-white/80 dark:bg-black/50 text-primary">
+<span class="material-symbols-outlined"> favorite </span>
+</button>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-200">Brightening Face Scrub</p>
+<p class="font-bold text-gray-900 dark:text-white">$15.99</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="flex-shrink-0 border-t border-gray-200 bg-background-light dark:border-gray-700 dark:bg-background-dark">
+<div class="flex flex-col gap-4 p-4">
+<div class="flex justify-around">
+<button class="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined"> shopping_bag </span>
+<span class="text-xs font-medium">Move to Cart</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined"> share </span>
+<span class="text-xs font-medium">Share Wishlist</span>
+</button>
+</div>
+<button class="w-full px-6 py-3 font-bold text-white rounded-full bg-primary">Add All to Cart</button>
+</div>
+<div class="flex justify-around py-2 border-t border-gray-200 dark:border-gray-700">
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> home </span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> category </span>
+<span class="text-xs">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> shopping_cart </span>
+<span class="text-xs">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined"> favorite </span>
+<span class="text-xs font-bold">Wishlist</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined"> person </span>
+<span class="text-xs">Profile</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

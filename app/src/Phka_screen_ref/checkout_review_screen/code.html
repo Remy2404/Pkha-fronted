@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+        --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-100">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -ml-2 text-zinc-900 dark:text-zinc-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center text-zinc-900 dark:text-zinc-100">Review Order</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-1 px-4 py-6 space-y-8">
+<section>
+<h2 class="mb-4 text-lg font-bold text-zinc-900 dark:text-zinc-100">Order Summary</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-center bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvve9gSDGqjtWQd0J7pJ1PehaVdyrSsfc_U-z9cVANsP7L6DXh3lMneBjk3N6GPICI60Xj0ZtFbpIuQ5_qeEEhTvVhG2fVFkXJsIZDXfQm-OBTGNLvyPTmMHzxZI479ARfojthj_DBjChqmjfrcCsFUN3cxyKxzSzdQEX4f5Ez7BmfGm7AnpQPxnW66NlGdeNDWed4FmqnbRUn3LoPMn8CcqNWUSEl2n_-xMORwri6qboLDfJuo3rqn65TsIEiZ8jRIDHNfbg2Ymc');"></div>
+<div class="flex-1">
+<p class="font-medium text-zinc-900 dark:text-zinc-100">Rosehip Oil</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Qty: 1</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-zinc-100">$20.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-center bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3ejicKtTa9RHXMvtlmk0eB9m8Kna0Y4Ma95BjmeFlqar3v_6DZt6YfS6hv1PLrEOHBLaFLo4EqRHT6Z7uzSF1YYTwNGVMD8j0jrzPQOVaiZ0l1ukW8RPGAgUSX9ie6R695gkfwaPR_BrmJUQy5xwdDwUEXfaZ_Xi9s6WRb_lHyqV4wLodQQrXKNkuEoJMBbucdBNku0wsS1F_0c_xi9ioRwHl0VYp_7sbga1zPcK0dYKPEngMJ_MK2DC_1RGy9a-wshFOjkAhCtk');"></div>
+<div class="flex-1">
+<p class="font-medium text-zinc-900 dark:text-zinc-100">Vitamin C Serum</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Qty: 1</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-zinc-100">$25.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-center bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_8MFnV3BsqstpvsooM2hbFoCXV-08RtqH7zSl31OZg72lR-Q57SCXr5rLO_2mok9RBEFQKBBxLpD4LCm_rky9vZzzDaEwUqKiEBGAhAQ-JwqOp2biPjurJs2YgWsQipYk6RqwUUnZ1ZGFv58yxlzCT0xsCLNP7z71lEY89wTA2VjyXefEGYgyBfrjrhfRPlF6vKkxvimLEZLTCKeNKYSKjnqmXjrXHqaID3w4q-8GFJl5OappLvxhuSxTYR6jrPygoi1bZT7Q8ec');"></div>
+<div class="flex-1">
+<p class="font-medium text-zinc-900 dark:text-zinc-100">Hyaluronic Acid</p>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Qty: 1</p>
+</div>
+<p class="font-medium text-zinc-900 dark:text-zinc-100">$10.00</p>
+</div>
+</div>
+<div class="pt-6 mt-6 space-y-2 border-t border-zinc-200 dark:border-zinc-700">
+<div class="flex justify-between">
+<p class="text-zinc-600 dark:text-zinc-400">Subtotal</p>
+<p class="font-medium text-zinc-900 dark:text-zinc-100">$55.00</p>
+</div>
+<div class="flex justify-between">
+<p class="text-zinc-600 dark:text-zinc-400">Shipping</p>
+<p class="font-medium text-zinc-900 dark:text-zinc-100">$5.00</p>
+</div>
+<div class="flex justify-between text-lg font-bold">
+<p class="text-zinc-900 dark:text-zinc-100">Total</p>
+<p class="text-zinc-900 dark:text-zinc-100">$60.00</p>
+</div>
+</div>
+</section>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">Shipping Address</h2>
+<button class="flex items-center gap-1 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-base">edit</span>
+            Edit
+          </button>
+</div>
+<div class="flex gap-4 p-4 rounded-lg bg-zinc-100 dark:bg-zinc-800/50">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
+<span class="text-primary material-symbols-outlined">location_on</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-zinc-900 dark:text-zinc-100">Sophia Carter</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-400">(555) 123-4567</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-400">123 Beauty Lane, Apt 4B, Cityville, State 12345</p>
+</div>
+</div>
+</section>
+<div class="w-full h-px bg-zinc-200 dark:bg-zinc-800"></div>
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">Payment Method</h2>
+<button class="flex items-center gap-1 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-base">edit</span>
+            Edit
+          </button>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-zinc-100 dark:bg-zinc-800/50">
+<div class="w-10 h-6 bg-center bg-contain rounded" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDd0I6DgP7EvlGpYodYfidimtWToxbvLh5ObKdM1OEaWzVnYLkLtWYiLZBUZV9Tz6MyKx8DvPGqdJiqQU2_UTwzkUAYbKfiZGLgksh368XIYXIW3ZSrLUmubgCOKKtWfS4_v9r4wxAPcTwXXV5rE8U_Dplchs7kx2kwndQBwl0BJzB36NKFRJcsdanZAFGFH_tAAuztOFMHzqS6cCkHZgpJp_38V-yBb4LDgQ5xE7eT5s8ypYj3hCDyj-YQOMPp5lon1O-gzxAVNyw');"></div>
+<p class="flex-1 font-medium text-zinc-900 dark:text-zinc-100">**** **** **** 1234</p>
+</div>
+</section>
+<div class="py-4">
+<label class="flex items-center gap-3">
+<input class="w-5 h-5 rounded appearance-none bg-zinc-200 dark:bg-zinc-700 checked:bg-primary checked:border-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary checked:bg-[image:--checkbox-tick-svg]" type="checkbox"/>
+<span class="text-sm text-zinc-600 dark:text-zinc-400">I agree to the <a class="font-medium underline text-primary" href="#">terms and conditions</a></span>
+</label>
+</div>
+</main>
+<footer class="sticky bottom-0 px-4 py-3 bg-background-light dark:bg-background-dark border-t border-zinc-200 dark:border-zinc-800">
+<button class="w-full h-12 px-5 font-bold tracking-wide text-white rounded-xl bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary">
+        Place Order
+      </button>
+</footer>
+</div>
+
+
+</body></html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                        "content-light": "#1b0d14",
+                        "content-dark": "#f8f6f7",
+                        "subtle-light": "#9a4c73",
+                        "subtle-dark": "#a18dae",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a151f",
+                        "border-light": "#f3e7ed",
+                        "border-dark": "#3c2331",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex flex-col min-h-screen w-full">
+<header class="sticky top-0 z-10 flex items-center justify-between p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<button class="text-content-light dark:text-content-dark">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-content-light dark:text-content-dark">Reviews</h1>
+<div class="w-10"></div>
+</header>
+<main class="flex-grow overflow-y-auto">
+<section class="p-4 border-b border-border-light dark:border-border-dark">
+<div class="flex flex-wrap items-start gap-6">
+<div class="flex flex-col items-center gap-2">
+<p class="text-5xl font-black text-content-light dark:text-content-dark">4.5</p>
+<div class="flex text-primary">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">120 reviews</p>
+</div>
+<div class="grid flex-1 grid-cols-[auto_1fr_auto] items-center gap-x-3 gap-y-1 min-w-[200px]">
+<p class="text-sm text-content-light dark:text-content-dark">5</p>
+<div class="h-1.5 rounded-full bg-border-light dark:bg-border-dark"><div class="h-1.5 rounded-full bg-primary" style="width: 40%;"></div></div>
+<p class="text-sm text-right text-subtle-light dark:text-subtle-dark">40%</p>
+<p class="text-sm text-content-light dark:text-content-dark">4</p>
+<div class="h-1.5 rounded-full bg-border-light dark:bg-border-dark"><div class="h-1.5 rounded-full bg-primary" style="width: 30%;"></div></div>
+<p class="text-sm text-right text-subtle-light dark:text-subtle-dark">30%</p>
+<p class="text-sm text-content-light dark:text-content-dark">3</p>
+<div class="h-1.5 rounded-full bg-border-light dark:bg-border-dark"><div class="h-1.5 rounded-full bg-primary" style="width: 15%;"></div></div>
+<p class="text-sm text-right text-subtle-light dark:text-subtle-dark">15%</p>
+<p class="text-sm text-content-light dark:text-content-dark">2</p>
+<div class="h-1.5 rounded-full bg-border-light dark:bg-border-dark"><div class="h-1.5 rounded-full bg-primary" style="width: 5%;"></div></div>
+<p class="text-sm text-right text-subtle-light dark:text-subtle-dark">5%</p>
+<p class="text-sm text-content-light dark:text-content-dark">1</p>
+<div class="h-1.5 rounded-full bg-border-light dark:bg-border-dark"><div class="h-1.5 rounded-full bg-primary" style="width: 10%;"></div></div>
+<p class="text-sm text-right text-subtle-light dark:text-subtle-dark">10%</p>
+</div>
+</div>
+</section>
+<section class="py-6">
+<h2 class="px-4 pb-4 text-lg font-bold text-content-light dark:text-content-dark">Photo Reviews</h2>
+<div class="flex gap-3 px-4 overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<img alt="Photo review" class="h-28 w-28 object-cover rounded-lg flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj2i8g4-lRv5QQvmO6Y0tGLvCPZoSOG6dAPzNZNfuIU9xw7lqkGgkUT0mRXXlUFDLkRcRGYc-4n4nyANt6XyIq75jYyc1GdMJ5CxLpP4wvcp2EPRMJ9YnZxi32gHZF0ll0p2ECPfrwej3kt81Pqwb0QKVNa2pgwuXEN7QqqaZRPIxp19kkbFLGvFMYNIRFxoU1Vcyk3NkcaCpr0BlmU-xhrTlYWn7kqWG14F32-UXZWFMWYYXjb3fannrLpUZVBCSKwQ-hU1KdVK8"/>
+<img alt="Photo review" class="h-28 w-28 object-cover rounded-lg flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNC4g9EM_segXExfDQrw8zNgOvfdSWXzRatGr93QULgwC1D7kavTRJn45y_J7r33mS59afamuKV4Y-uOpJcia-UxWsS-Kz_Yp7MihHRHBMwBhXgAjFLc6qpwHJYs-Oguh7HOHNjLFtPuOICfhPsZo1xaLAqTzJdzTr5kJdDDQJTaQiALSHs435FgL_mFHo9BKn6a935zOAXJukisyartGH2cTVYMaGyDtk_96WQc9JMWaz6upyreOr-4vgNmn0q_FZRh5aaxYGO-I"/>
+<img alt="Photo review" class="h-28 w-28 object-cover rounded-lg flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArbCsUdQ5jXSBgYBoD1ocBeau6a4vuCHQBt8Tg5ebXOXwN-_nv2mBXDZHLxjqEfPaKedBzT60sEzKhzKHgI_NZJ5aEqbxSPkft_K1WiYSXG-4Z7rlP_tk5xuN-puR_7-xB9kfM1-fHKWSDR7RqlX7aTo_xvNk6Be3T-Ltk7gbbQTDgjee2soXQv7ubHOacpLQs7PFCrfyKwlYXftHosAqH_7jHcUgtSfSv5wCPvGGotT9p9Zdpz9u924fNZN9xnqizXBWwFDYRxMU"/>
+<div class="h-28 w-28 rounded-lg flex-shrink-0 bg-primary/20 dark:bg-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">add_photo_alternate</span>
+</div>
+</div>
+</section>
+<div class="px-4 pb-4 space-y-6">
+<div class="p-4 rounded-lg bg-surface-light dark:bg-surface-dark">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img alt="Sophia Carter" class="size-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2YL8fypVPUSBCOTAgqKVBNDja9uiv77_doFwxQuzsm5ke5Wn5RYhb3VLj_AI-Pdyn_-VupN04A5Y-f_HeKzghtdj4PkmL3QM2BPlwPYGcpOWcr0fV9J2u3GPtfTCBtJhXINV-mSrXzxiCr83vS1kE2URfeoImR3aupCwCXd9S4-M2hvYzzEZUapB4-eXUaaaT6LyXXTDnVc6HPURdG07pyCibEHLcFlY8kyRfkVIMkABObxG3A2QCVeFl_1nwQZK12VI5z6Zcokw"/>
+<div class="flex-1">
+<p class="font-medium text-content-light dark:text-content-dark">Sophia Carter</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2 weeks ago</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-content-light dark:text-content-dark">This product is amazing! It exceeded my expectations and I would highly recommend it to anyone looking for a high-quality beauty product.</p>
+<div class="flex items-center gap-6 text-subtle-light dark:text-subtle-dark">
+<button class="flex items-center gap-2 text-sm hover:text-primary"><span class="material-symbols-outlined text-xl">thumb_up</span> 25</button>
+<button class="flex items-center gap-2 text-sm hover:text-primary"><span class="material-symbols-outlined text-xl">thumb_down</span> 5</button>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-light dark:bg-surface-dark">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img alt="Olivia Bennett" class="size-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyIqPXcj3NYVcLrzLjmZ5UUL7hAFy2tHiMlNVm3J80UOY1wzXSqgkezHNSb_vOv3Gtw8WSxDA1Pf-_EnWKyNd_FHuqqSp-5lHzalmutoxslSVhusn9IUuqRVZBX9uiD3g5FX7GdpUii_jwn1r_Mls9NHUGk_JgFCmD4hpBbMEEI_5e7aOx9PbCAdQHObLOebx3r65rf9MOwVl-l3WQOvnmzNznZi4NmPRF_7P7ItePIjcOeziAXzSIAqplTm1KZhNofT_vvyqjMoE"/>
+<div class="flex-1">
+<p class="font-medium text-content-light dark:text-content-dark">Olivia Bennett</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">1 month ago</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg text-border-light dark:text-border-dark" style="font-variation-settings: 'FILL' 0">star</span>
+</div>
+<p class="text-content-light dark:text-content-dark">I really like this product, but it could be better. The packaging is nice, and the product itself is effective, but I wish it came in more shades.</p>
+<div class="flex items-center gap-6 text-subtle-light dark:text-subtle-dark">
+<button class="flex items-center gap-2 text-sm hover:text-primary"><span class="material-symbols-outlined text-xl">thumb_up</span> 18</button>
+<button class="flex items-center gap-2 text-sm hover:text-primary"><span class="material-symbols-outlined text-xl">thumb_down</span> 3</button>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-light dark:bg-surface-dark">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img alt="Ava Thompson" class="size-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvfagC-Bqv1SOCrGR2tl5lnrzYjKOla0wH2w2e713xQIPo6-tuSW2kF98qvDNX_5JhomyXEd1z1NeekYOfmJ4rESOQrBlhTtDSwcKLyftYcVib28lHiRUf_9pcUxI6BOT7TfIeCBG2MJncS6tVuJ0n10LD-PHqDD1eS_1fpUP-3MdK9_y_CowFTZTgSW8iOjkR7a935FKeFI9Ki6amGQi83b2vx4p41gBnp6rnGXmBxoJQq2PxRhM1lXR3VdskJikto0RZC3NlYfo"/>
+<div class="flex-1">
+<p class="font-medium text-content-light dark:text-content-dark">Ava Thompson</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2 months ago</p>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-content-light dark:text-content-dark">Absolutely love this product! It's become a staple in my daily routine. The results are noticeable and it's gentle on my skin.</p>
+<div class="flex items-center gap-6 text-subtle-light dark:text-subtle-dark">
+<button class="flex items-center gap-2 text-sm hover:text-primary"><span class="material-symbols-outlined text-xl">thumb_up</span> 32</button>
+<button class="flex items-center gap-2 text-sm hover:text-primary"><span class="material-symbols-outlined text-xl">thumb_down</span> 2</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark pb-safe">
+<div class="p-4">
+<button class="w-full h-12 px-6 text-base font-bold text-white rounded-lg bg-primary">Write Review</button>
+</div>
+<div class="flex justify-around py-2 border-t border-border-light dark:border-border-dark">
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-content-light dark:text-content-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs">Profile</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold flex-1 text-center text-gray-900 dark:text-white">How to use</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="relative aspect-video">
+<img alt="Product tutorial video thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_brSE858oUr97viYBVQSXalWjAt_pY8vRaIibafiYlq0YLuDzGxpSTKu1CQDgtggiGgYXCdMpb4ToLu86sVnxsuqQrUH_g34WxJLm6PFNzJwhmEb6Qo77apOsHVdEN_uWH7v09ocXo_5oc8nfrVuo6x-RhMWGVtJIUUuD4KEKJqsp3TjvGu5PxruUptvgV7r2YBwcXaS9nLI4oJXcYw_t_CBlGixQ10h5InWmbGb-aMPIVdmwGB7DKrj_dC6KPbNnlPgHXVpSfKs"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/30">
+<button class="flex items-center justify-center size-16 bg-primary rounded-full text-white shadow-lg transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-6">
+<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Tips &amp; Tricks</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-white dark:bg-black/10">
+<div class="flex-shrink-0 size-10 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-gray-900 dark:text-white">Application</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                Apply a thin layer of the product to clean, dry skin, avoiding the eye area. Leave on for 10-15 minutes, then rinse thoroughly with lukewarm water.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-white dark:bg-black/10">
+<div class="flex-shrink-0 size-10 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-gray-900 dark:text-white">Frequency</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                For best results, use 2-3 times a week. If you have sensitive skin, start with once a week and gradually increase frequency as tolerated.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-white dark:bg-black/10">
+<div class="flex-shrink-0 size-10 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-gray-900 dark:text-white">Moisturizing</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                Follow with your favorite moisturizer to lock in hydration and keep your skin feeling soft and supple.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-gray-200 dark:border-white/10">
+<nav class="flex justify-around items-center px-4 pt-2 pb-4">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">view_list</span>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

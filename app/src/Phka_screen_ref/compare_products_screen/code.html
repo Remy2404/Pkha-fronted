@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phka - Compare Products</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-gray-900 dark:text-white pr-8">Compare</h1>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4">
+<div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide" style="scroll-padding: 0 1rem;">
+<div class="flex-shrink-0 w-16 sticky left-0 z-10 bg-background-light dark:bg-background-dark py-4">
+<div class="h-40 mb-4"></div>
+<div class="space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400">
+<p class="h-8 flex items-center">Price</p>
+<p class="h-8 flex items-center">Rating</p>
+<p class="h-8 flex items-center">Volume</p>
+<p class="h-8 flex items-center">Vegan</p>
+<p class="h-8 flex items-center">Cruelty-Free</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-52 snap-start px-2">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-2">
+<img alt="Radiant Glow Serum" class="h-40 w-40 object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpNCjSgk4_1NSttRw2nLxGccR8GCvhd5YTqyDYzzOTJDBwptaXAPbZC6O8SOmT6c39DgJRJtoWov4NYXCUdJamDZ1xgZof9oVwag_drszPpMl9-WJMZXqB9hNHJBk1GIohT-K7oWMRLQqM7411PnrS33rIef2qLADkJljf4xgXSrwxAv_qwN1th7ZQxZPv8Xj_5S5dEnsGDlI-i5IPK72gFldd0s0RCN_AbgQV0OGfNP6XAYJLcii9yWw-Jkk5Z7Kscg9e3aXalI0"/>
+<div class="absolute top-2 right-2 bg-primary/20 text-primary px-2 py-1 text-xs font-bold rounded-full">Best Seller</div>
+</div>
+<h2 class="font-bold text-gray-900 dark:text-white">Radiant Glow Serum</h2>
+<div class="mt-4 space-y-4 text-gray-800 dark:text-gray-200">
+<p class="font-bold text-primary h-8 flex items-center justify-center">$32.00</p>
+<div class="h-8 flex items-center justify-center">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary text-base">star</span>
+<span class="ml-1">4.8</span>
+</div>
+</div>
+<p class="h-8 flex items-center justify-center">30ml</p>
+<p class="h-8 flex items-center justify-center"><span class="material-symbols-outlined text-primary">check_circle</span></p>
+<p class="h-8 flex items-center justify-center"><span class="material-symbols-outlined text-primary">check_circle</span></p>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-52 snap-start px-2">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-2">
+<img alt="Hydrating Face Mask" class="h-40 w-40 object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEBb93j34zszBWJfButnYdXpqedwO4dMvtEcEhvJoEJMk-LJOgLI4sxybvMknEMXQBf3Ijr086WtoOaufyQlwbEcr2F9hFYVKpUcqcBzDHPhxXJgLYebW7cQYvIamee3_m92BqHOBHQ3WYt9EPKscDcolVqyNexUgySY6gfq8BXpqdIZvStQwKnBMMgX2-AqWjAaLzV_cEekboYoL4J81tgr5xXqcy2NTfMZGQC0IVEVQacv0V9rvP-QWYYcWPfAKq7g9qBbaRyjk"/>
+<div class="absolute top-2 right-2 bg-primary/20 text-primary px-2 py-1 text-xs font-bold rounded-full">New Arrival</div>
+</div>
+<h2 class="font-bold text-gray-900 dark:text-white">Hydrating Face Mask</h2>
+<div class="mt-4 space-y-4 text-gray-800 dark:text-gray-200">
+<p class="font-bold text-primary h-8 flex items-center justify-center">$25.00</p>
+<div class="h-8 flex items-center justify-center">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary text-base">star</span>
+<span class="ml-1">4.9</span>
+</div>
+</div>
+<p class="h-8 flex items-center justify-center bg-primary/10 rounded-lg">50ml</p>
+<p class="h-8 flex items-center justify-center"><span class="material-symbols-outlined text-primary">check_circle</span></p>
+<p class="h-8 flex items-center justify-center"><span class="material-symbols-outlined text-gray-400 dark:text-gray-600">cancel</span></p>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-52 snap-start px-2">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-2">
+<img alt="Luxury Eye Cream" class="h-40 w-40 object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHwVLZ5t081N_YDF9q1NgquQXxBg6T68e2-tZSAvAivfbRa3yh8Jji7KF-k2K_CpAM2GwE4Zsr_-UMUNeD2gxJLfPTU5lHX21asji5qIjyal0_yeyuG5XVxQ4Wb-27Y8r0ffUu187Hpz7O4VRszC3ICNWKd0R8393wKNM9W16-gNlRtgTB5ScJqVMiS2ge2PwzyWxE_Sq5ymnX5u6wexmmAOnAR6rvn9qy6D_nR3p7iZC8-jZi5GPzk5cAt_iQhn1DYP_HVG75qKI"/>
+<div class="absolute top-2 right-2 bg-primary/20 text-primary px-2 py-1 text-xs font-bold rounded-full">Limited</div>
+</div>
+<h2 class="font-bold text-gray-900 dark:text-white">Luxury Eye Cream</h2>
+<div class="mt-4 space-y-4 text-gray-800 dark:text-gray-200">
+<p class="font-bold text-primary h-8 flex items-center justify-center bg-primary/10 rounded-lg">$45.00</p>
+<div class="h-8 flex items-center justify-center">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary text-base">star</span>
+<span class="ml-1">4.7</span>
+</div>
+</div>
+<p class="h-8 flex items-center justify-center">15ml</p>
+<p class="h-8 flex items-center justify-center"><span class="material-symbols-outlined text-gray-400 dark:text-gray-600">cancel</span></p>
+<p class="h-8 flex items-center justify-center"><span class="material-symbols-outlined text-primary">check_circle</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-center">
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-primary/30">Add to Cart</button>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800">
+<nav class="flex justify-around py-2">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-xs font-medium">Categories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-xs font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>
