@@ -34,22 +34,30 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.myphka.phka.R
+import com.myphka.phka.ui.theme.BackgroundLight
+import com.myphka.phka.ui.theme.CategoryConcealer
+import com.myphka.phka.ui.theme.CategoryFoundation
+import com.myphka.phka.ui.theme.CategoryPowder
 import com.myphka.phka.ui.theme.DeepPink
+import com.myphka.phka.ui.theme.OnPrimary
+import com.myphka.phka.ui.theme.PrimaryLight
+import com.myphka.phka.ui.theme.TextDark
+import com.myphka.phka.ui.theme.TextPrimary
 
 data class Category(val name: String, val color: Color, val drawableId: Int)
 
 @Composable
 fun OnboardingCategoriesScreen(navController: NavController) {
     val categories = listOf(
-        Category("Foundation", Color(0xFFDEB5D2), R.drawable.product_021),
-        Category("Concealer", Color(0xFFD4A5C4), R.drawable.product_022),
-        Category("Setting Powder", Color(0xFFCAA0BD), R.drawable.product_023),
+        Category("Foundation", CategoryFoundation, R.drawable.product_021),
+        Category("Concealer", CategoryConcealer, R.drawable.product_022),
+        Category("Setting Powder", CategoryPowder, R.drawable.product_023),
     )
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F6F7))
+            .background(BackgroundLight)
     ) {
         Spacer(modifier = Modifier.height(32.dp))
 
@@ -58,7 +66,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                 .fillMaxWidth()
                 .height(320.dp)
                 .padding(horizontal = 24.dp)
-                .background(color = Color(0xFFE0C9D6), shape = RoundedCornerShape(16.dp))
+                .background(color = PrimaryLight, shape = RoundedCornerShape(16.dp))
         ) {
             Image(
                 painter = painterResource(R.drawable.categories),
@@ -78,7 +86,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                 text = "Explore Products",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF1B0D14)
+                color = TextPrimary
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -86,7 +94,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
             Text(
                 text = "Discover a wide range of beauty products tailored to your needs.",
                 fontSize = 14.sp,
-                color = Color(0xFF492939),
+                color = TextDark,
                 textAlign = TextAlign.Center
             )
 
@@ -115,7 +123,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                             text = categories[index].name,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Medium,
-                            color = Color(0xFF1B0D14),
+                            color = TextPrimary,
                             textAlign = TextAlign.Center
                         )
                     }
@@ -178,7 +186,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                 ) {
                     Text(
                         text = "Next",
-                        color = Color.White,
+                        color = OnPrimary,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )
