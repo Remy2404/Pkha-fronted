@@ -36,6 +36,10 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.myphka.phka.ui.theme.BackgroundLight
+import com.myphka.phka.ui.theme.DeepPink
+import com.myphka.phka.ui.theme.OnPrimary
+import com.myphka.phka.ui.theme.TextPrimary
 
 @Composable
 fun RegisterScreen(navController: NavController) {
@@ -48,7 +52,7 @@ fun RegisterScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F6F7))
+            .background(BackgroundLight)
     ) {
         Row(
             modifier = Modifier
@@ -60,14 +64,14 @@ fun RegisterScreen(navController: NavController) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Back",
-                    tint = Color(0xFF1B0D14)
+                    tint = TextPrimary
                 )
             }
             Text(
                 text = "Register",
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF1B0D14),
+                color = TextPrimary,
                 modifier = Modifier.weight(1f),
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center
             )
@@ -86,10 +90,10 @@ fun RegisterScreen(navController: NavController) {
                 label = { Text("Name") },
                 modifier = Modifier.fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color(0xFFEC1380).copy(alpha = 0.2f),
-                    focusedBorderColor = Color(0xFFEC1380),
-                    unfocusedLabelColor = Color(0xFF1B0D14).copy(alpha = 0.5f),
-                    focusedLabelColor = Color(0xFFEC1380)
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = TextPrimary.copy(alpha = 0.5f),
+                    focusedLabelColor = DeepPink
                 ),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
             )
@@ -103,10 +107,10 @@ fun RegisterScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color(0xFFEC1380).copy(alpha = 0.2f),
-                    focusedBorderColor = Color(0xFFEC1380),
-                    unfocusedLabelColor = Color(0xFF1B0D14).copy(alpha = 0.5f),
-                    focusedLabelColor = Color(0xFFEC1380)
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = TextPrimary.copy(alpha = 0.5f),
+                    focusedLabelColor = DeepPink
                 ),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
             )
@@ -121,10 +125,10 @@ fun RegisterScreen(navController: NavController) {
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color(0xFFEC1380).copy(alpha = 0.2f),
-                    focusedBorderColor = Color(0xFFEC1380),
-                    unfocusedLabelColor = Color(0xFF1B0D14).copy(alpha = 0.5f),
-                    focusedLabelColor = Color(0xFFEC1380)
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = TextPrimary.copy(alpha = 0.5f),
+                    focusedLabelColor = DeepPink
                 ),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
             )
@@ -139,10 +143,10 @@ fun RegisterScreen(navController: NavController) {
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color(0xFFEC1380).copy(alpha = 0.2f),
-                    focusedBorderColor = Color(0xFFEC1380),
-                    unfocusedLabelColor = Color(0xFF1B0D14).copy(alpha = 0.5f),
-                    focusedLabelColor = Color(0xFFEC1380)
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = TextPrimary.copy(alpha = 0.5f),
+                    focusedLabelColor = DeepPink
                 ),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
             )
@@ -157,15 +161,15 @@ fun RegisterScreen(navController: NavController) {
                     checked = termsAccepted.value,
                     onCheckedChange = { termsAccepted.value = it },
                     colors = CheckboxDefaults.colors(
-                        checkedColor = Color(0xFFEC1380),
-                        uncheckedColor = Color(0xFFEC1380).copy(alpha = 0.5f)
+                        checkedColor = DeepPink,
+                        uncheckedColor = DeepPink.copy(alpha = 0.5f)
                     )
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "I agree to the ",
                     fontSize = 12.sp,
-                    color = Color(0xFF1B0D14).copy(alpha = 0.7f)
+                    color = TextPrimary.copy(alpha = 0.7f)
                 )
                 TextButton(
                     onClick = { },
@@ -174,7 +178,7 @@ fun RegisterScreen(navController: NavController) {
                     Text(
                         text = "Terms and Conditions",
                         fontSize = 12.sp,
-                        color = Color(0xFFEC1380),
+                        color = DeepPink,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -188,13 +192,13 @@ fun RegisterScreen(navController: NavController) {
                     .fillMaxWidth()
                     .height(48.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFEC1380)
+                    containerColor = DeepPink
                 ),
                 enabled = termsAccepted.value
             ) {
                 Text(
                     text = "Register",
-                    color = Color.White,
+                    color = OnPrimary,
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp
                 )
@@ -209,13 +213,13 @@ fun RegisterScreen(navController: NavController) {
                 Text(
                     text = "Already have an account? ",
                     fontSize = 12.sp,
-                    color = Color(0xFF1B0D14).copy(alpha = 0.7f)
+                    color = TextPrimary.copy(alpha = 0.7f)
                 )
                 TextButton(onClick = { navController.navigate("login") }) {
                     Text(
                         text = "Login",
                         fontSize = 12.sp,
-                        color = Color(0xFFEC1380),
+                        color = DeepPink,
                         fontWeight = FontWeight.Medium
                     )
                 }

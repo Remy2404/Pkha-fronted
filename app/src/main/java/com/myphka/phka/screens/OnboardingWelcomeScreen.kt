@@ -37,6 +37,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.myphka.phka.R
+import com.myphka.phka.ui.theme.BackgroundLight
+import com.myphka.phka.ui.theme.DeepPink
+import com.myphka.phka.ui.theme.OnPrimary
+import com.myphka.phka.ui.theme.PrimaryLight
+import com.myphka.phka.ui.theme.TextPrimary
+import com.myphka.phka.ui.theme.TextTertiary
 import kotlinx.coroutines.launch
 
 data class OnboardingPage(
@@ -62,7 +68,7 @@ fun OnboardingWelcomeScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F6F7))
+            .background(BackgroundLight)
     ) {
         Row(
             modifier = Modifier
@@ -77,13 +83,13 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f),
                 textAlign = TextAlign.Center,
-                color = Color(0xFF1B0D14)
+                color = TextPrimary
             )
             IconButton(onClick = { navController.navigate("login") }) {
                 Icon(
                     imageVector = Icons.Default.Close,
                     contentDescription = "Close",
-                    tint = Color(0xFF1B0D14),
+                    tint = TextPrimary,
                     modifier = Modifier.size(24.dp)
                 )
             }
@@ -110,7 +116,7 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                         .fillMaxWidth(0.85f)
                         .height(300.dp)
                         .background(
-                            Color(0xFFE0C9D6),
+                            PrimaryLight,
                             shape = RoundedCornerShape(16.dp)
                         ),
                     contentAlignment = Alignment.Center
@@ -129,7 +135,7 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                     text = currentPage.title,
                     fontSize = 28.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF1B0D14)
+                    color = TextPrimary
                 )
 
                 Spacer(modifier = Modifier.height(12.dp))
@@ -137,7 +143,7 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                 Text(
                     text = currentPage.description,
                     fontSize = 16.sp,
-                    color = Color(0xFF665577),
+                    color = TextTertiary,
                     textAlign = TextAlign.Center
                 )
             }
@@ -159,7 +165,7 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                         modifier = Modifier
                             .size(8.dp)
                             .background(
-                                if (index == pagerState.currentPage) Color(0xFFEC1380) else Color(0xFFEC1380).copy(
+                                if (index == pagerState.currentPage) DeepPink else DeepPink.copy(
                                     alpha = 0.2f
                                 ),
                                 shape = RoundedCornerShape(50)
@@ -180,12 +186,12 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                         .weight(1f)
                         .height(48.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFEC1380).copy(alpha = 0.1f)
+                        containerColor = DeepPink.copy(alpha = 0.1f)
                     )
                 ) {
                     Text(
                         text = "Skip",
-                        color = Color(0xFFEC1380),
+                        color = DeepPink,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )
@@ -205,12 +211,12 @@ fun OnboardingWelcomeScreen(navController: NavController) {
                         .weight(1f)
                         .height(48.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFEC1380)
+                        containerColor = DeepPink
                     )
                 ) {
                     Text(
                         text = if (pagerState.currentPage < pagerState.pageCount - 1) "Next" else "Get Started",
-                        color = Color.White,
+                        color = OnPrimary,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )
