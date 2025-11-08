@@ -34,17 +34,16 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.myphka.phka.R
-import com.myphka.phka.ui.theme.DeepPink
-import com.myphka.phka.ui.theme.bgColor
+import com.myphka.phka.ui.theme.*
 
 data class Category(val name: String, val color: Color, val drawableId: Int)
 
 @Composable
 fun OnboardingCategoriesScreen(navController: NavController) {
     val categories = listOf(
-        Category("Foundation", Color(0xFFDEB5D2), R.drawable.product_021),
-        Category("Concealer", Color(0xFFD4A5C4), R.drawable.product_022),
-        Category("Setting Powder", Color(0xFFCAA0BD), R.drawable.product_023),
+        Category("Foundation", CategoryColor1, R.drawable.product_021),
+        Category("Concealer", CategoryColor2, R.drawable.product_022),
+        Category("Setting Powder", CategoryColor3, R.drawable.product_023),
     )
 
     Column(
@@ -79,7 +78,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                 text = "Explore Products",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF1B0D14)
+                color = DarkText
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -87,7 +86,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
             Text(
                 text = "Discover a wide range of beauty products tailored to your needs.",
                 fontSize = 14.sp,
-                color = Color(0xFF492939),
+                color = SecondaryText,
                 textAlign = TextAlign.Center
             )
 
@@ -116,7 +115,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                             text = categories[index].name,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Medium,
-                            color = Color(0xFF1B0D14),
+                            color = DarkText,
                             textAlign = TextAlign.Center
                         )
                     }
@@ -179,7 +178,7 @@ fun OnboardingCategoriesScreen(navController: NavController) {
                 ) {
                     Text(
                         text = "Next",
-                        color = Color.White,
+                        color = White,
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp
                     )

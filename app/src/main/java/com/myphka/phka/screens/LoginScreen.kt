@@ -33,7 +33,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -44,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.myphka.phka.R
+import com.myphka.phka.ui.theme.*
 
 
 @Composable
@@ -54,7 +54,7 @@ fun LoginScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F6F7))
+            .background(bgColor)
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -64,7 +64,7 @@ fun LoginScreen(navController: NavController) {
             modifier = Modifier
                 .size(64.dp)
                 .background(
-                    Color(0xFFE0C9D6),
+                    OnboardingBoxBackground,
                     shape = androidx.compose.foundation.shape.RoundedCornerShape(24.dp)
                 ),
             contentAlignment = Alignment.Center
@@ -92,15 +92,15 @@ fun LoginScreen(navController: NavController) {
                     Icon(
                         imageVector = Icons.Filled.Email,
                         contentDescription = "Email",
-                        tint = Color(0xFF9A4C73)
+                        tint = IconTint
                     )
                 },
                 modifier = Modifier.fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color(0xFFEC1380).copy(alpha = 0.2f),
-                    focusedBorderColor = Color(0xFFEC1380),
-                    unfocusedLabelColor = Color(0xFF9A4C73),
-                    focusedLabelColor = Color(0xFFEC1380)
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = IconTint,
+                    focusedLabelColor = DeepPink
                 ),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
@@ -116,16 +116,16 @@ fun LoginScreen(navController: NavController) {
                     Icon(
                         imageVector = Icons.Filled.Lock,
                         contentDescription = "Password",
-                        tint = Color(0xFF9A4C73)
+                        tint = IconTint
                     )
                 },
                 modifier = Modifier.fillMaxWidth(),
                 visualTransformation = PasswordVisualTransformation(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    unfocusedBorderColor = Color(0xFFEC1380).copy(alpha = 0.2f),
-                    focusedBorderColor = Color(0xFFEC1380),
-                    unfocusedLabelColor = Color(0xFF9A4C73),
-                    focusedLabelColor = Color(0xFFEC1380)
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = IconTint,
+                    focusedLabelColor = DeepPink
                 ),
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
@@ -141,7 +141,7 @@ fun LoginScreen(navController: NavController) {
                     Text(
                         text = "Forgot Password?",
                         fontSize = 12.sp,
-                        color = Color(0xFFEC1380),
+                        color = DeepPink,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -155,12 +155,12 @@ fun LoginScreen(navController: NavController) {
                     .fillMaxWidth()
                     .height(48.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFEC1380)
+                    containerColor = DeepPink
                 )
             ) {
                 Text(
                     text = "Login",
-                    color = Color.White,
+                    color = White,
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp
                 )
@@ -171,7 +171,7 @@ fun LoginScreen(navController: NavController) {
             Text(
                 text = "Or login with",
                 fontSize = 12.sp,
-                color = Color(0xFF9A4C73)
+                color = IconTint
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -186,7 +186,7 @@ fun LoginScreen(navController: NavController) {
                         .weight(1f)
                         .height(48.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFEC1380).copy(alpha = 0.1f)
+                        containerColor = DeepPink.copy(alpha = 0.1f)
                     )
                 ) {
                     Image(
@@ -197,7 +197,7 @@ fun LoginScreen(navController: NavController) {
                     Spacer(modifier = Modifier.size(8.dp))
                     Text(
                         text = "Google",
-                        color = Color(0xFF1B0D14),
+                        color = DarkText,
                         fontWeight = FontWeight.Medium,
                         fontSize = 12.sp
                     )
@@ -208,7 +208,7 @@ fun LoginScreen(navController: NavController) {
                         .weight(1f)
                         .height(48.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFEC1380).copy(alpha = 0.1f)
+                        containerColor = DeepPink.copy(alpha = 0.1f)
                     )
                 ) {
                     Image(
@@ -219,7 +219,7 @@ fun LoginScreen(navController: NavController) {
                     Spacer(modifier = Modifier.size(8.dp))
                     Text(
                         text = "Apple",
-                        color = Color(0xFF1B0D14),
+                        color = DarkText,
                         fontWeight = FontWeight.Medium,
                         fontSize = 12.sp
                     )
@@ -236,13 +236,13 @@ fun LoginScreen(navController: NavController) {
                 Text(
                     text = "Don't have an account? ",
                     fontSize = 12.sp,
-                    color = Color(0xFF9A4C73)
+                    color = IconTint
                 )
                 TextButton(onClick = { navController.navigate("register") }) {
                     Text(
                         text = "Create Account",
                         fontSize = 12.sp,
-                        color = Color(0xFFEC1380),
+                        color = DeepPink,
                         fontWeight = FontWeight.Bold
                     )
                 }

@@ -30,6 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.myphka.phka.ui.theme.*
 import kotlinx.coroutines.delay
 
 @Composable
@@ -54,7 +55,7 @@ fun SplashScreen(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F6F7)),
+            .background(bgColor),
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -71,14 +72,14 @@ fun SplashScreen(navController: NavController) {
                     modifier = Modifier
                         .size(64.dp)
                         .scale(scale.value),
-                    tint = Color(0xFFEC1380)
+                    tint = DeepPink
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
                     text = "Phka",
                     fontSize = 48.sp,
                     fontWeight = FontWeight.Black,
-                    color = Color(0xFFEC1380)
+                    color = DeepPink
                 )
             }
 
@@ -86,7 +87,7 @@ fun SplashScreen(navController: NavController) {
 
             CircularProgressIndicator(
                 modifier = Modifier.size(64.dp),
-                color = Color(0xFFEC1380),
+                color = DeepPink,
                 strokeWidth = 4.dp
             )
 
@@ -95,7 +96,7 @@ fun SplashScreen(navController: NavController) {
             Text(
                 text = "Loading, please wait...",
                 fontSize = 18.sp,
-                color = Color(0xFFEC1380)
+                color = DeepPink
             )
         }
     }

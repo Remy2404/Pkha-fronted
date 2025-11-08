@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.myphka.phka.R
+import com.myphka.phka.ui.theme.*
 
 sealed class FeatureIcon {
     data class Vector(val icon: ImageVector) : FeatureIcon()
@@ -65,7 +66,7 @@ fun OnboardingFeaturesScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F6F7))
+            .background(bgColor)
     ) {
         Row(
             modifier = Modifier
@@ -78,7 +79,7 @@ fun OnboardingFeaturesScreen(navController: NavController) {
                     modifier = Modifier
                         .size(8.dp)
                         .background(
-                            if (index == 2) Color(0xFFEC1380) else Color(0xFFEC1380).copy(alpha = 0.2f),
+                            if (index == 2) DeepPink else DeepPink.copy(alpha = 0.2f),
                             shape = androidx.compose.foundation.shape.RoundedCornerShape(50)
                         )
                 )
@@ -90,7 +91,7 @@ fun OnboardingFeaturesScreen(navController: NavController) {
             text = "Discover the best of Phka",
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF1B0D14),
+            color = DarkText,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 24.dp, vertical = 12.dp),
@@ -116,12 +117,12 @@ fun OnboardingFeaturesScreen(navController: NavController) {
                 .padding(16.dp)
                 .height(56.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFEC1380)
+                containerColor = DeepPink
             )
         ) {
             Text(
                 text = "Get Started",
-                color = Color.White,
+                color = White,
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp
             )
@@ -135,7 +136,7 @@ fun FeatureCard(feature: Feature) {
         modifier = Modifier
             .fillMaxWidth()
             .background(
-                Color.White,
+                White,
                 shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
             )
             .padding(16.dp),
@@ -146,7 +147,7 @@ fun FeatureCard(feature: Feature) {
             modifier = Modifier
                 .size(48.dp)
                 .background(
-                    Color(0xFFEC1380).copy(alpha = 0.1f),
+                    DeepPink.copy(alpha = 0.1f),
                     shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
                 ),
             contentAlignment = Alignment.Center
@@ -155,7 +156,7 @@ fun FeatureCard(feature: Feature) {
                 is FeatureIcon.Vector -> Icon(
                     imageVector = feature.icon.icon,
                     contentDescription = feature.title,
-                    tint = Color(0xFFEC1380),
+                    tint = DeepPink,
                     modifier = Modifier.size(28.dp)
                 )
                 is FeatureIcon.PainterIcon -> androidx.compose.foundation.Image(
@@ -173,13 +174,13 @@ fun FeatureCard(feature: Feature) {
                 text = feature.title,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF1B0D14)
+                color = DarkText
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = feature.description,
                 fontSize = 12.sp,
-                color = Color(0xFF665577)
+                color = OnboardingDescriptionText
             )
         }
     }
