@@ -173,6 +173,16 @@ Rules:
 * Make the UI as close as possible to the reference HTML + PNG files.
 * Output should be clean, readable, and modular (per-screen folders or files).
 * Wait for my "Continue" command before generating the next batch.
+* Each batch must be self-contained and ready to run in Android Studio.
+* Use only standard AndroidX and Jetpack Compose libraries.
+* Avoid external libraries unless absolutely necessary.
+* Follow the project’s existing coding conventions.
+* Each screen must have basic navigation stubs to the next screen.
+* Ensure ViewModel and Repository classes are properly structured.
+* Each screen must handle basic UI states (loading, error, content).
+* Each screen must include references replacing images from (app\src\main\res\drawable\*) note : no empty images to show me and text from the design files.
+* patterns and can be easily extended with real API calls when the backend is ready.
+* Color scheme and typography must follow the existing theme in the project.
 * No generated a document & comments Just code.
 
 
