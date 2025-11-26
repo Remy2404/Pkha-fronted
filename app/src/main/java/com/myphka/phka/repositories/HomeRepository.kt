@@ -1,49 +1,105 @@
 package com.myphka.phka.repositories
 
-import com.myphka.phka.viewmodels.Banner
-import com.myphka.phka.viewmodels.Category
-import com.myphka.phka.viewmodels.Product
+import com.myphka.phka.R
+import com.myphka.phka.models.Banner
+import com.myphka.phka.models.Category
+import com.myphka.phka.models.Product
 
 class HomeRepository {
-    suspend fun getBanners(): List<Banner> {
-        // Placeholder for actual API call
-        return listOf(
-            Banner("1", "New Arrivals", "banner1.jpg"),
-            Banner("2", "Summer Sale", "banner2.jpg"),
-            Banner("3", "Beauty Tips", "banner3.jpg")
+    fun getBanners(): List<Banner> = listOf(
+        Banner(
+            id = "1",
+            title = "New Arrivals",
+            imageRes = R.drawable.product_001
+        ),
+        Banner(
+            id = "2",
+            title = "Summer Sale",
+            imageRes = R.drawable.product_002
+        ),
+        Banner(
+            id = "3",
+            title = "Haircare Essentials",
+            imageRes = R.drawable.category_003
         )
-    }
+    )
 
-    suspend fun getCategories(): List<Category> {
-        // Placeholder for actual API call
-        return listOf(
-            Category("1", "Skincare", "skincare.jpg"),
-            Category("2", "Makeup", "makeup.jpg"),
-            Category("3", "Hair Care", "haircare.jpg"),
-            Category("4", "Fragrance", "fragrance.jpg"),
-            Category("5", "Tools", "tools.jpg")
+    fun getCategories(): List<Category> = listOf(
+        Category(
+            id = "1",
+            name = "Makeup",
+            imageRes = R.drawable.category_001
+        ),
+        Category(
+            id = "2",
+            name = "Skincare",
+            imageRes = R.drawable.category_002
+        ),
+        Category(
+            id = "3",
+            name = "Haircare",
+            imageRes = R.drawable.category_003
+        ),
+        Category(
+            id = "4",
+            name = "Fragrances",
+            imageRes = R.drawable.category_004
         )
-    }
+    )
 
-    suspend fun getFeaturedProducts(): List<Product> {
-        // Placeholder for actual API call
-        return listOf(
-            Product("1", "Hydrating Face Cream", 29.99, "cream1.jpg", 4.5f),
-            Product("2", "Matte Lipstick", 15.99, "lipstick1.jpg", 4.2f),
-            Product("3", "Shampoo Bar", 12.99, "shampoo1.jpg", 4.7f),
-            Product("4", "Foundation", 35.99, "foundation1.jpg", 4.3f)
+    fun getFeaturedProducts(): List<Product> = listOf(
+        Product(
+            id = "1",
+            name = "Luxury Lipstick",
+            price = 25.0,
+            imageRes = R.drawable.product_001,
+            category = "Makeup"
+        ),
+        Product(
+            id = "2",
+            name = "Organic Face Serum",
+            price = 45.0,
+            imageRes = R.drawable.product_002,
+            category = "Skincare"
+        ),
+        Product(
+            id = "3",
+            name = "Professional Hair Dryer",
+            price = 80.0,
+            imageRes = R.drawable.product_003,
+            category = "Haircare"
+        ),
+        Product(
+            id = "4",
+            name = "Hydrating Face Mask",
+            price = 15.0,
+            imageRes = R.drawable.product_004,
+            category = "Skincare"
         )
-    }
+    )
 
-    suspend fun getRecommendedProducts(): List<Product> {
-        // Placeholder for actual API call
-        return listOf(
-            Product("5", "Eye Shadow Palette", 45.99, "palette1.jpg", 4.6f),
-            Product("6", "Facial Cleanser", 18.99, "cleanser1.jpg", 4.4f),
-            Product("7", "Hair Mask", 22.99, "mask1.jpg", 4.8f),
-            Product("8", "Mascara", 11.99, "mascara1.jpg", 4.1f),
-            Product("9", "Body Lotion", 16.99, "lotion1.jpg", 4.3f),
-            Product("10", "Sunscreen", 25.99, "sunscreen1.jpg", 4.5f)
+    fun getRecommendedProducts(): List<Product> = listOf(
+        Product(
+            id = "5",
+            name = "Hydrating Face Mask",
+            price = 15.0,
+            imageRes = R.drawable.product_005,
+            category = "Skincare"
+        ),
+        Product(
+            id = "6",
+            name = "Anti-Aging Eye Cream",
+            price = 35.0,
+            imageRes = R.drawable.product_006,
+            category = "Skincare"
+        ),
+        Product(
+            id = "7",
+            name = "Volumizing Hair Spray",
+            price = 20.0,
+            imageRes = R.drawable.product_007,
+            category = "Haircare",
         )
-    }
+    )
 }
+

@@ -1,5 +1,6 @@
 package com.myphka.phka.repositories
 
+import android.util.Log
 data class LoginRequest(val email: String, val password: String)
 data class LoginResponse(val token: String, val userId: String)
 
@@ -9,8 +10,13 @@ class LoginRepository {
         @Suppress("UNUSED_PARAMETER") password: String
     ): Result<LoginResponse> {
         return try {
-            // Placeholder for actual API call
-            Result.success(LoginResponse(token = "fake_token", userId = "user_123"))
+            Log.d("LoginRepository", "Attempting login for email: $email")
+            // For testing: only accept the specific test credentials
+            if (email == "test@example.com" && password == "password123") {
+                Result.success(LoginResponse(token = "fake_token", userId = "user_123"))
+            } else {
+                Result.failure(Exception("Invalid credentials"))
+            }
         } catch (e: Exception) {
             Result.failure(e)
         }

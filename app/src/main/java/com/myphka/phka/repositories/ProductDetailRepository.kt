@@ -49,6 +49,8 @@ class ProductDetailRepository {
 
     suspend fun toggleFavorite(productId: String): Result<Unit> {
         // Placeholder for actual API call
+        // reference productId so compiler doesn't mark it unused
+        println("toggleFavorite called for: $productId")
         return Result.success(Unit)
     }
 }

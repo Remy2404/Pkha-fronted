@@ -11,6 +11,7 @@ import com.myphka.phka.screens.OnboardingFeaturesScreen
 import com.myphka.phka.screens.OnboardingWelcomeScreen
 import com.myphka.phka.screens.RegisterScreen
 import com.myphka.phka.screens.SplashScreen
+import com.myphka.phka.screens.HomeScreen
 
 @Composable
 fun PhkaNavHost(navController: NavHostController, modifier: Modifier) {
@@ -41,8 +42,7 @@ fun PhkaNavHost(navController: NavHostController, modifier: Modifier) {
             LoginScreen(navController = navController)
         }
         composable("home") {
-            // Placeholder for Home screen
-            LoginScreen(navController = navController)
+            HomeScreen(navController = navController)
         }
     }
 }

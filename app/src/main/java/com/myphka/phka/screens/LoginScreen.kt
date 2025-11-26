@@ -22,17 +22,20 @@ import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -40,16 +43,25 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.myphka.phka.R
 import com.myphka.phka.ui.theme.*
+import com.myphka.phka.viewmodels.LoginViewModel
 
 
 @Composable
-fun LoginScreen(navController: NavController) {
-    val email = remember { mutableStateOf("") }
-    val password = remember { mutableStateOf("") }
+fun LoginScreen(navController: NavController, viewModel: LoginViewModel = viewModel()) {
+    val uiState by viewModel.uiState.collectAsState()
+
+    LaunchedEffect(uiState.isLoginSuccessful) {
+        if (uiState.isLoginSuccessful) {
+            navController.navigate("home") {
+                popUpTo("login") { inclusive = true }
+            }
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -85,8 +97,8 @@ fun LoginScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             OutlinedTextField(
-                value = email.value,
-                onValueChange = { email.value = it },
+                value = uiState.email,
+                onValueChange = { viewModel.updateEmail(it) },
                 label = { Text("Email") },
                 leadingIcon = {
                     Icon(
@@ -95,7 +107,9 @@ fun LoginScreen(navController: NavController) {
                         tint = IconTint
                     )
                 },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("login_email_field"),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
                     focusedBorderColor = DeepPink,
@@ -109,8 +123,8 @@ fun LoginScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(16.dp))
 
             OutlinedTextField(
-                value = password.value,
-                onValueChange = { password.value = it },
+                value = uiState.password,
+                onValueChange = { viewModel.updatePassword(it) },
                 label = { Text("Password") },
                 leadingIcon = {
                     Icon(
@@ -119,7 +133,9 @@ fun LoginScreen(navController: NavController) {
                         tint = IconTint
                     )
                 },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("login_password_field"),
                 visualTransformation = PasswordVisualTransformation(),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
@@ -132,6 +148,43 @@ fun LoginScreen(navController: NavController) {
             )
 
             Spacer(modifier = Modifier.height(16.dp))
+
+            // Test helper: fill test credentials quickly
+            TextButton(onClick = { viewModel.updateEmail("test@example.com"); viewModel.updatePassword("password123") }) {
+                Text(text = "Fill test creds", fontSize = 12.sp, color = IconTint)
+            }
+
+            OutlinedTextField(
+                value = uiState.password,
+                onValueChange = { viewModel.updatePassword(it) },
+                label = { Text("Password") },
+                leadingIcon = {
+                    Icon(
+                        imageVector = Icons.Filled.Lock,
+                        contentDescription = "Password",
+                        tint = IconTint
+                    )
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("login_password_field"),
+                visualTransformation = PasswordVisualTransformation(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    unfocusedBorderColor = DeepPink.copy(alpha = 0.2f),
+                    focusedBorderColor = DeepPink,
+                    unfocusedLabelColor = IconTint,
+                    focusedLabelColor = DeepPink
+                ),
+                shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            uiState.error?.let { err ->
+                Text(text = err, color = androidx.compose.ui.graphics.Color.Red, fontSize = 12.sp)
+                Spacer(modifier = Modifier.height(8.dp))
+            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -150,20 +203,25 @@ fun LoginScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Button(
-                onClick = { navController.navigate("home") },
+                onClick = { viewModel.login() },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(48.dp),
+                    .height(48.dp)
+                    .testTag("login_button"),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = DeepPink
                 )
             ) {
-                Text(
-                    text = "Login",
-                    color = White,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp
-                )
+                if (uiState.isLoading) {
+                    CircularProgressIndicator(color = White, modifier = Modifier.size(18.dp))
+                } else {
+                    Text(
+                        text = "Login",
+                        color = White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -181,7 +239,7 @@ fun LoginScreen(navController: NavController) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Button(
-                    onClick = { },
+                    onClick = { viewModel.loginWithGoogle() },
                     modifier = Modifier
                         .weight(1f)
                         .height(48.dp),
@@ -203,7 +261,7 @@ fun LoginScreen(navController: NavController) {
                     )
                 }
                 Button(
-                    onClick = { },
+                    onClick = { viewModel.loginWithApple() },
                     modifier = Modifier
                         .weight(1f)
                         .height(48.dp),

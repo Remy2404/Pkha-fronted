@@ -58,66 +58,66 @@ If anything here is unclear or missing, tell me which area you want expanded (bu
 When generating or updating screens, always use the following userflow as the canonical source for screen order and naming.  
 Screen implementation, file names, and navigation order must follow this list:
 
-- Splash Screen
-- Onboarding Screen: Welcome
-- Onboarding Screen: Product Categories
-- Onboarding Screen: Features
-- Login Screen
-- Register Screen
-- Forgot Password Screen
-- Home Screen Layout
-- Category List Screen
-- Product List Screen
-- Product Detail Screen
-- Product Reviews Screen
-- Product Variants Screen
-- Search Screen
-- Search Results Screen
-- Filter Screen
-- Sort Screen
-- Shopping Cart Screen
-- Cart Item Edit Screen
-- Wishlist Screen
-- Compare Products Screen
-- Checkout Address Screen
-- Checkout Payment Screen
-- Checkout Review Screen
-- Order Confirmation Screen
-- Order Tracking Screen
-- Order History Screen
-- Order Details Screen
-- Profile Screen
-- Settings Screen
-- Product Ingredients Screen
-- How to Use Screen
-- Related Products Screen
-- Share Product Screen
-- Advanced Search Screen
-- Beauty Quiz Screen
-- Quiz Results Screen
-- Virtual Try-On Screen
-- Size Guide Screen
-- Product Bundles Screen
-- Gift Cards Screen
-- Recently Viewed Screen
-- Price Alerts Screen
-- Store Locator Screen
-- Beauty Tips Screen
-- Tutorial Videos Screen
-- Community Feed Screen
-- Live Chat Support Screen
-- Help & FAQ Screen
-- Returns & Refunds Screen
-- Loyalty Program Screen
-- Notification Center Screen
-- App Feedback Screen
-- About Us Screen
-- Contact Us Screen
-- Privacy Policy Screen
-- Terms of Service Screen
-- Social Media Links Screen
-- App Version & Updates Screen
-- Data Management Screen
+1. Splash Screen
+2. Onboarding Screen: Welcome
+3. Onboarding Screen: Product Categories
+4. Onboarding Screen: Features
+5. Login Screen
+6. Register Screen
+7. Forgot Password Screen
+8. Home Screen Layout
+9. Category List Screen
+10. Product List Screen
+11. Product Detail Screen
+12. Product Reviews Screen
+13. Product Variants Screen
+14. Search Screen
+15. Search Results Screen
+16. Filter Screen
+17. Sort Screen
+18. Shopping Cart Screen
+19. Cart Item Edit Screen
+20. Wishlist Screen
+21. Compare Products Screen
+22. Checkout Address Screen
+23. Checkout Payment Screen
+24. Checkout Review Screen
+25. Order Confirmation Screen
+26. Order Tracking Screen
+27. Order History Screen
+28. Order Details Screen
+29. Profile Screen
+30. Settings Screen
+31. Product Ingredients Screen
+32. How to Use Screen
+33. Related Products Screen
+34. Share Product Screen
+35. Advanced Search Screen
+36. Beauty Quiz Screen
+37. Quiz Results Screen
+38. Virtual Try-On Screen
+39. Size Guide Screen
+40. Product Bundles Screen
+41. Gift Cards Screen
+42. Recently Viewed Screen
+43. Price Alerts Screen
+44. Store Locator Screen
+45. Beauty Tips Screen
+46. Tutorial Videos Screen
+47. Community Feed Screen
+48. Live Chat Support Screen
+49. Help & FAQ Screen
+50. Returns & Refunds Screen
+51. Loyalty Program Screen
+52. Notification Center Screen
+53. App Feedback Screen
+54. About Us Screen
+55. Contact Us Screen
+56. Privacy Policy Screen
+57. Terms of Service Screen
+58. Social Media Links Screen
+59. App Version & Updates Screen
+60. Data Management Screen
 
 **When generating code:**
 - Always use the above userflow order and screen names.
@@ -191,3 +191,4 @@ When ready, ask:
 
 When I confirm, generate the code for those 6 screens.
 Note : make sure is ready for runing in Android Studio without errors.
+````

@@ -1,0 +1,89 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "assembleDebug",
+			"type": "shell",
+			"command": ".\\gradlew.bat assembleDebug",
+			"isBackground": false
+		},
+		{
+			"label": "assembleDebug-stack",
+			"type": "shell",
+			"command": ".\\gradlew.bat assembleDebug --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "assembleDebug-info",
+			"type": "shell",
+			"command": ".\\gradlew.bat assembleDebug --info",
+			"isBackground": false
+		},
+		{
+			"label": "compileDebugKotlin",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "clean-assemble",
+			"type": "shell",
+			"command": ".\\gradlew.bat clean assembleDebug --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "compile-check",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "compile-check2",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "assemble",
+			"type": "shell",
+			"command": ".\\gradlew.bat assembleDebug --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "verify-compile",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --info --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "compile-debug-final",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "assembleDebug-final",
+			"type": "shell",
+			"command": ".\\gradlew.bat assembleDebug --stacktrace --info",
+			"isBackground": false
+		},
+		{
+			"label": "compile-final2",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "compile-final3",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		},
+		{
+			"label": "compile-check-2",
+			"type": "shell",
+			"command": ".\\gradlew.bat :app:compileDebugKotlin --stacktrace",
+			"isBackground": false
+		}
+	]
+}
