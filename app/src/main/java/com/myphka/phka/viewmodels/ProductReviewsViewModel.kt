@@ -4,9 +4,11 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myphka.phka.repositories.ProductReviewsRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 data class Review(
     val id: String,
@@ -25,8 +27,9 @@ data class ProductReviewsUiState(
     val error: String? = null
 )
 
-class ProductReviewsViewModel(
-    private val repository: ProductReviewsRepository = ProductReviewsRepository(),
+@HiltViewModel
+class ProductReviewsViewModel @Inject constructor(
+    private val repository: ProductReviewsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     private val productId: String = savedStateHandle["productId"] ?: ""

@@ -1,8 +1,9 @@
 package com.myphka.phka.repositories
 
 import com.myphka.phka.viewmodels.Review
+import javax.inject.Inject
 
-class ProductReviewsRepository {
+class ProductReviewsRepository @Inject constructor() {
     suspend fun getReviewsByProductId(productId: String): List<Review> {
         // Placeholder for actual API call
         return when (productId) {

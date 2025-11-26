@@ -33,7 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.myphka.phka.R
@@ -41,7 +41,7 @@ import com.myphka.phka.ui.theme.*
 import com.myphka.phka.viewmodels.ProductReviewsViewModel
 
 @Composable
-fun ProductReviewsScreen(navController: NavController, productId: String, viewModel: ProductReviewsViewModel = viewModel()) {
+fun ProductReviewsScreen(navController: NavController, productId: String, viewModel: ProductReviewsViewModel = hiltViewModel()) {
     val uiState by viewModel.uiState.collectAsState()
 
     Column(
