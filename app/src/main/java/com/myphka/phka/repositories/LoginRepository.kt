@@ -12,7 +12,7 @@ class LoginRepository {
         return try {
             Log.d("LoginRepository", "Attempting login for email: $email")
             // For testing: only accept the specific test credentials
-            if (email == "test@example.com" && password == "password123") {
+            if (email == "test@x.com" && password == "123") {
                 Result.success(LoginResponse(token = "fake_token", userId = "user_123"))
             } else {
                 Result.failure(Exception("Invalid credentials"))

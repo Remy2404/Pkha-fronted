@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import coil.compose.AsyncImage
 import com.myphka.phka.models.Banner
 import com.myphka.phka.models.Category
 import com.myphka.phka.models.Product
@@ -47,7 +48,7 @@ fun HomeScreen(
         modifier = modifier.fillMaxSize(),
         topBar = {
             HomeTopBar(
-                onCartClick = { viewModel.onCartClick() }
+                onCartClick = { navController.navigate("cart") }
             )
         },
         bottomBar = {
@@ -55,10 +56,10 @@ fun HomeScreen(
                 selectedItem = 0,
                 onItemSelected = { index ->
                     when (index) {
-                        0 -> {}
-                        1 -> {}
-                        2 -> {}
-                        3 -> {}
+                        0 -> {} // Already on Home
+                        1 -> navController.navigate("category_list")
+                        2 -> navController.navigate("cart")
+                        3 -> navController.navigate("order_history") // Profile/Orders
                     }
                 }
             )
@@ -67,10 +68,10 @@ fun HomeScreen(
     ) { paddingValues ->
         HomeContent(
             uiState = uiState,
-            onBannerClick = { viewModel.onBannerClick(it) },
-            onCategoryClick = { viewModel.onCategoryClick(it) },
-            onProductClick = { viewModel.onProductClick(it) },
-            onSearchClick = { viewModel.onSearchClick() },
+            onBannerClick = { /* TODO: Handle banner click */ },
+            onCategoryClick = { categoryId -> navController.navigate("product_list/$categoryId") },
+            onProductClick = { productId -> navController.navigate("product_detail/$productId") },
+            onSearchClick = { navController.navigate("search") },
             modifier = Modifier.padding(paddingValues)
         )
     }
@@ -233,10 +234,12 @@ fun BannerCard(
             .clip(RoundedCornerShape(16.dp))
             .clickable { onClick() }
     ) {
-        Image(
-            painter = painterResource(id = banner.imageRes),
+        AsyncImage(
+            model = banner.imageUrl ?: banner.imageRes,
             contentDescription = banner.title,
             modifier = Modifier.fillMaxSize(),
+            placeholder = painterResource(id = banner.imageRes),
+            error = painterResource(id = banner.imageRes),
             contentScale = ContentScale.Crop
         )
 
@@ -317,13 +320,15 @@ fun CategoryCard(
     Column(
         modifier = modifier.clickable { onClick() }
     ) {
-        Image(
-            painter = painterResource(id = category.imageRes),
+        AsyncImage(
+            model = category.imageUrl ?: category.imageRes,
             contentDescription = category.name,
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
                 .clip(RoundedCornerShape(16.dp)),
+            placeholder = painterResource(id = category.imageRes),
+            error = painterResource(id = category.imageRes),
             contentScale = ContentScale.Crop
         )
 
@@ -415,13 +420,15 @@ fun ProductCard(
             .width(160.dp)
             .clickable { onClick() }
     ) {
-        Image(
-            painter = painterResource(id = product.imageRes),
+        AsyncImage(
+            model = product.imageUrl ?: product.imageRes,
             contentDescription = product.name,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
                 .clip(RoundedCornerShape(16.dp)),
+            placeholder = painterResource(id = product.imageRes),
+            error = painterResource(id = product.imageRes),
             contentScale = ContentScale.Crop
         )
 
@@ -562,4 +569,3 @@ fun HomeScreenPreview() {
         HomeScreen(navController = rememberNavController())
     }
 }
-

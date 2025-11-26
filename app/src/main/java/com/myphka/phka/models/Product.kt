@@ -5,5 +5,6 @@ data class Product(
     val name: String,
     val price: Double,
     @DrawableRes val imageRes: Int,
-    val category: String = ""
+    val category: String = "",
+    val imageUrl: String? = null
 )

@@ -18,7 +18,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Share
@@ -35,16 +35,15 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import coil.compose.AsyncImage
 import com.myphka.phka.R
 import com.myphka.phka.ui.theme.*
 import com.myphka.phka.viewmodels.ProductDetailViewModel
@@ -67,7 +66,7 @@ fun ProductDetailScreen(navController: NavController, productId: String, viewMod
         ) {
             IconButton(onClick = { navController.navigateUp() }) {
                 Icon(
-                    imageVector = Icons.Default.ArrowBack,
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Back",
                     tint = IconTint
                 )
@@ -126,10 +125,12 @@ fun ProductDetailScreen(navController: NavController, productId: String, viewMod
                             .height(300.dp)
                             .background(White)
                     ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.product_001),
+                        AsyncImage(
+                            model = product.imageUrl ?: product.imageRes,
                             contentDescription = product.name,
-                            modifier = Modifier.fillMaxSize()
+                            modifier = Modifier.fillMaxSize(),
+                            placeholder = painterResource(id = product.imageRes),
+                            error = painterResource(id = product.imageRes)
                         )
                     }
 

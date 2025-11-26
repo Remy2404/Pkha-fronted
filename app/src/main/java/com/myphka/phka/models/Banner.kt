@@ -5,6 +5,7 @@ import androidx.annotation.DrawableRes
 data class Banner(
     val id: String,
     val title: String,
-    @DrawableRes val imageRes: Int
+    @DrawableRes val imageRes: Int,
+    val imageUrl: String? = null
 )
 

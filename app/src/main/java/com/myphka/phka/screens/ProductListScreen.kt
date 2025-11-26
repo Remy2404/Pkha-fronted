@@ -13,13 +13,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.Card
@@ -33,6 +32,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -42,12 +42,14 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import coil.compose.AsyncImage
 import com.myphka.phka.R
 import com.myphka.phka.ui.theme.*
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.myphka.phka.viewmodels.ProductListViewModel
 
 @Composable
-fun ProductListScreen(navController: NavController, categoryId: String, viewModel: ProductListViewModel = viewModel()) {
+fun ProductListScreen(navController: NavController, categoryId: String, viewModel: ProductListViewModel = hiltViewModel()) {
     val uiState by viewModel.uiState.collectAsState()
 
     Column(
@@ -64,7 +66,7 @@ fun ProductListScreen(navController: NavController, categoryId: String, viewMode
         ) {
             IconButton(onClick = { navController.navigateUp() }) {
                 Icon(
-                    imageVector = Icons.Default.ArrowBack,
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Back",
                     tint = IconTint
                 )
@@ -80,7 +82,7 @@ fun ProductListScreen(navController: NavController, categoryId: String, viewMode
 
             IconButton(onClick = { navController.navigate("filter") }) {
                 Image(
-                    painter = painterResource(id = R.drawable.icon_google),
+                    painter = painterResource(id = R.drawable.icon_google), // Placeholder icon
                     contentDescription = "Filter",
                     modifier = Modifier.size(24.dp)
                 )
@@ -128,13 +130,16 @@ fun ProductListScreen(navController: NavController, categoryId: String, viewMode
                     ) {
                         Column {
                             Box(modifier = Modifier.fillMaxWidth()) {
-                                Image(
-                                    painter = painterResource(id = R.drawable.product_001),
+                                AsyncImage(
+                                    model = product.imageUrl ?: product.imageRes,
                                     contentDescription = product.name,
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .height(140.dp)
-                                        .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp))
+                                        .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)),
+                                    placeholder = painterResource(id = product.imageRes),
+                                    error = painterResource(id = product.imageRes),
+                                    contentScale = ContentScale.Crop
                                 )
 
                                 IconButton(

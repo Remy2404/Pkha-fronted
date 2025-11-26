@@ -4,16 +4,19 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myphka.phka.repositories.ProductListRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 data class ProductListItem(
     val id: String,
     val name: String,
     val price: Double,
     val originalPrice: Double? = null,
-    val imageUrl: String,
+    val imageUrl: String? = null,
+    val imageRes: Int,
     val rating: Float,
     val reviewCount: Int,
     val isFavorite: Boolean = false
@@ -26,8 +29,9 @@ data class ProductListUiState(
     val error: String? = null
 )
 
-class ProductListViewModel(
-    private val repository: ProductListRepository = ProductListRepository(),
+@HiltViewModel
+class ProductListViewModel @Inject constructor(
+    private val repository: ProductListRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     private val categoryId: String = savedStateHandle["categoryId"] ?: ""
