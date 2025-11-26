@@ -4,9 +4,11 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myphka.phka.repositories.ProductDetailRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 data class ProductDetail(
     val id: String,
@@ -30,8 +32,9 @@ data class ProductDetailUiState(
     val error: String? = null
 )
 
-class ProductDetailViewModel(
-    private val repository: ProductDetailRepository = ProductDetailRepository(),
+@HiltViewModel
+class ProductDetailViewModel @Inject constructor(
+    private val repository: ProductDetailRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     private val productId: String = savedStateHandle["productId"] ?: ""

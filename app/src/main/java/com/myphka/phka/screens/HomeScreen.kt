@@ -59,7 +59,7 @@ fun HomeScreen(
                         0 -> {} // Already on Home
                         1 -> navController.navigate("category_list")
                         2 -> navController.navigate("cart")
-                        3 -> navController.navigate("order_history") // Profile/Orders
+                        3 -> navController.navigate("profile") // Profile
                     }
                 }
             )

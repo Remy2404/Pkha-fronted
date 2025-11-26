@@ -1,8 +1,9 @@
 package com.myphka.phka.repositories
 
 import com.myphka.phka.viewmodels.ProductDetail
+import javax.inject.Inject
 
-class ProductDetailRepository {
+class ProductDetailRepository @Inject constructor() {
     suspend fun getProductById(productId: String): ProductDetail {
         // Placeholder for actual API call
         return when (productId) {
