@@ -31,6 +31,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.myphka.phka.ui.theme.*
+import androidx.navigation.compose.rememberNavController
+import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.delay
 
 @Composable
@@ -100,4 +102,10 @@ fun SplashScreen(navController: NavController) {
             )
         }
     }
+}
+
+@Preview
+@Composable
+fun SplashScreenPreview() {
+    SplashScreen(navController = rememberNavController())
 }

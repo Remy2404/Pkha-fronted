@@ -7,10 +7,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun ShareProductScreen(navController: NavController, productId: String) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text(text = "Share Product Screen for $productId")
     }
+}
+
+@Preview
+@Composable
+fun ShareProductScreenPreview() {
+    ShareProductScreen(navController = rememberNavController(), productId = "1")
 }

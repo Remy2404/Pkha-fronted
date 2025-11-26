@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.myphka.phka.models.Address
 import com.myphka.phka.models.PaymentMethod
@@ -269,4 +270,28 @@ fun OrderConfirmationScreen(
             Text("Continue Shopping")
         }
     }
+}
+
+@Preview
+@Composable
+fun CheckoutAddressScreenPreview() {
+    CheckoutAddressScreen(onNextClick = {}, onBackClick = {})
+}
+
+@Preview
+@Composable
+fun CheckoutPaymentScreenPreview() {
+    CheckoutPaymentScreen(onNextClick = {}, onBackClick = {})
+}
+
+@Preview
+@Composable
+fun CheckoutReviewScreenPreview() {
+    CheckoutReviewScreen(onOrderPlaced = {}, onBackClick = {})
+}
+
+@Preview
+@Composable
+fun OrderConfirmationScreenPreview() {
+    OrderConfirmationScreen(orderId = "123", onContinueShopping = {})
 }

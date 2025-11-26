@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.dp
 import com.myphka.phka.models.Product
 import com.myphka.phka.models.ProductVariant
 import com.myphka.phka.models.VariantType
+import androidx.compose.ui.tooling.preview.Preview
+import com.myphka.phka.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -131,4 +133,14 @@ fun getColorFromName(name: String): Color {
         "green" -> Color.Green
         else -> Color.Gray
     }
+}
+
+@Preview
+@Composable
+fun ProductVariantsSheetPreview() {
+    ProductVariantsSheet(
+        product = Product("1", "Test Product", 99.99, R.drawable.product_001),
+        onAddToCart = { _, _ -> },
+        onDismiss = {}
+    )
 }

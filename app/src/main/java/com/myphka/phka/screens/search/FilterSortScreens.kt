@@ -13,6 +13,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.myphka.phka.models.FilterOptions
 import com.myphka.phka.models.SortOption
 import com.myphka.phka.viewmodels.search.SearchViewModel
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -128,6 +129,9 @@ fun SortScreen(
                     IconButton(onClick = onClose) {
                         Icon(Icons.Default.Close, contentDescription = "Close")
                     }
+                },
+                actions = {
+                    // Reset button if needed
                 }
             )
         },
@@ -165,4 +169,10 @@ fun SortScreen(
             }
         }
     }
+}
+
+@Preview
+@Composable
+fun FilterScreenPreview() {
+    FilterScreen(onApply = {}, onClose = {})
 }

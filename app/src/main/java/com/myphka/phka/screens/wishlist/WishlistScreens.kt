@@ -19,6 +19,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.myphka.phka.models.Product
 import com.myphka.phka.viewmodels.wishlist.WishlistViewModel
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -144,4 +145,16 @@ fun CompareProductsScreen(
             }
         }
     }
+}
+
+@Preview
+@Composable
+fun WishlistScreenPreview() {
+    WishlistScreen(onProductClick = {}, onBackClick = {})
+}
+
+@Preview
+@Composable
+fun CompareProductsScreenPreview() {
+    CompareProductsScreen(products = emptyList(), onBackClick = {})
 }
