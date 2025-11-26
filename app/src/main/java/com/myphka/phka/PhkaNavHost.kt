@@ -9,17 +9,21 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.myphka.phka.screens.*
 import com.myphka.phka.screens.cart.ShoppingCartScreen
+import com.myphka.phka.screens.cart.CartItemEditScreen
 import com.myphka.phka.screens.checkout.*
 import com.myphka.phka.screens.orders.*
 import com.myphka.phka.screens.search.*
 import com.myphka.phka.screens.wishlist.CompareProductsScreen
 import com.myphka.phka.screens.wishlist.WishlistScreen
 import com.myphka.phka.screens.product.*
-import com.myphka.phka.screens.cart.*
 import com.myphka.phka.screens.profile.*
-import com.myphka.phka.screens.search.*
+import com.myphka.phka.screens.settings.SettingsScreen
 import com.myphka.phka.screens.quiz.*
 import com.myphka.phka.screens.tryon.*
+import com.myphka.phka.screens.guide.SizeGuideScreen
+import com.myphka.phka.screens.gift.GiftCardsScreen
+import com.myphka.phka.screens.store.StoreLocatorScreen
+import com.myphka.phka.screens.tips.BeautyTipsScreen
 
 @Composable
 fun PhkaNavHost(navController: NavHostController, modifier: Modifier) {
@@ -254,6 +258,27 @@ fun PhkaNavHost(navController: NavHostController, modifier: Modifier) {
         }
         composable("virtual_try_on") {
             VirtualTryOnScreen(navController = navController)
+        }
+        composable("size_guide") {
+            SizeGuideScreen(navController = navController)
+        }
+        composable("product_bundles") {
+            ProductBundlesScreen(navController = navController)
+        }
+        composable("gift_cards") {
+            GiftCardsScreen(navController = navController)
+        }
+        composable("recently_viewed") {
+            RecentlyViewedScreen(navController = navController)
+        }
+        composable("price_alerts") {
+            PriceAlertsScreen(navController = navController)
+        }
+        composable("store_locator") {
+            StoreLocatorScreen(navController = navController)
+        }
+        composable("beauty_tips") {
+            BeautyTipsScreen(navController = navController)
         }
     }
 }
