@@ -24,6 +24,13 @@ import com.myphka.phka.screens.guide.SizeGuideScreen
 import com.myphka.phka.screens.gift.GiftCardsScreen
 import com.myphka.phka.screens.store.StoreLocatorScreen
 import com.myphka.phka.screens.tips.BeautyTipsScreen
+import com.myphka.phka.screens.support.*
+import com.myphka.phka.screens.community.*
+import com.myphka.phka.screens.legal.*
+import com.myphka.phka.screens.loyalty.*
+import com.myphka.phka.screens.notifications.*
+import com.myphka.phka.screens.feedback.*
+import com.myphka.phka.screens.info.*
 
 @Composable
 fun PhkaNavHost(navController: NavHostController, modifier: Modifier) {
@@ -279,6 +286,57 @@ fun PhkaNavHost(navController: NavHostController, modifier: Modifier) {
         }
         composable("beauty_tips") {
             BeautyTipsScreen(navController = navController)
+        }
+
+        // Support & Community
+        composable("tutorial_videos") {
+            TutorialVideosScreen(navController = navController)
+        }
+        composable("community_feed") {
+            CommunityFeedScreen(navController = navController)
+        }
+        composable("live_chat") {
+            LiveChatSupportScreen(navController = navController)
+        }
+        composable("help_faq") {
+            HelpFaqScreen(navController = navController)
+        }
+
+        // Legal
+        composable("returns_refunds") {
+            ReturnsRefundsScreen(navController = navController)
+        }
+        composable("privacy_policy") {
+            PrivacyPolicyScreen(navController = navController)
+        }
+        composable("terms_of_service") {
+            TermsOfServiceScreen(navController = navController)
+        }
+
+        // Info & Feedback
+        composable("loyalty_program") {
+            LoyaltyProgramScreen(navController = navController)
+        }
+        composable("notification_center") {
+            NotificationCenterScreen(navController = navController)
+        }
+        composable("app_feedback") {
+            AppFeedbackScreen(navController = navController)
+        }
+        composable("about_us") {
+            AboutUsScreen(navController = navController)
+        }
+        composable("contact_us") {
+            ContactUsScreen(navController = navController)
+        }
+        composable("social_media") {
+            SocialMediaLinksScreen(navController = navController)
+        }
+        composable("app_version") {
+            AppVersionScreen(navController = navController)
+        }
+        composable("data_management") {
+            DataManagementScreen(navController = navController)
         }
     }
 }

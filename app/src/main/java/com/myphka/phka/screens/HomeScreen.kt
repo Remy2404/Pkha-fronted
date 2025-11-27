@@ -12,6 +12,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.outlined.*
+import androidx.compose.material.icons.filled.Groups
+import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -48,7 +51,8 @@ fun HomeScreen(
         modifier = modifier.fillMaxSize(),
         topBar = {
             HomeTopBar(
-                onCartClick = { navController.navigate("cart") }
+                onCartClick = { navController.navigate("cart") },
+                onNotificationClick = { navController.navigate("notification_center") }
             )
         },
         bottomBar = {
@@ -72,6 +76,8 @@ fun HomeScreen(
             onCategoryClick = { categoryId -> navController.navigate("product_list/$categoryId") },
             onProductClick = { productId -> navController.navigate("product_detail/$productId") },
             onSearchClick = { navController.navigate("search") },
+            onCommunityClick = { navController.navigate("community_feed") },
+            onTutorialsClick = { navController.navigate("tutorial_videos") },
             modifier = Modifier.padding(paddingValues)
         )
     }
@@ -80,7 +86,8 @@ fun HomeScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeTopBar(
-    onCartClick: () -> Unit
+    onCartClick: () -> Unit,
+    onNotificationClick: () -> Unit = {}
 ) {
     Column(
         modifier = Modifier
@@ -94,7 +101,16 @@ fun HomeTopBar(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Spacer(modifier = Modifier.width(48.dp))
+            IconButton(
+                onClick = onNotificationClick,
+                modifier = Modifier.size(48.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Notifications,
+                    contentDescription = "Notifications",
+                    tint = TextDark
+                )
+            }
 
             Text(
                 text = "Phka",
@@ -160,6 +176,8 @@ fun HomeContent(
     onCategoryClick: (String) -> Unit,
     onProductClick: (String) -> Unit,
     onSearchClick: () -> Unit,
+    onCommunityClick: () -> Unit,
+    onTutorialsClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -197,7 +215,82 @@ fun HomeContent(
             onProductClick = onProductClick
         )
 
+        Spacer(modifier = Modifier.height(24.dp))
+
+        DiscoverMoreSection(
+            onCommunityClick = onCommunityClick,
+            onTutorialsClick = onTutorialsClick
+        )
+
         Spacer(modifier = Modifier.height(100.dp))
+    }
+}
+
+@Composable
+fun DiscoverMoreSection(
+    onCommunityClick: () -> Unit,
+    onTutorialsClick: () -> Unit
+) {
+    Column(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+    ) {
+        Text(
+            text = "Discover More",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = TextDark
+        )
+        Spacer(modifier = Modifier.height(12.dp))
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            DiscoverCard(
+                title = "Community",
+                icon = Icons.Default.Groups,
+                onClick = onCommunityClick,
+                modifier = Modifier.weight(1f)
+            )
+            DiscoverCard(
+                title = "Tutorials",
+                icon = Icons.Default.PlayCircle,
+                onClick = onTutorialsClick,
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
+}
+
+@Composable
+fun DiscoverCard(
+    title: String,
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier.height(100.dp).clickable { onClick() },
+        colors = CardDefaults.cardColors(containerColor = BackgroundLight),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = PrimaryPink,
+                modifier = Modifier.size(32.dp)
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = title,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                color = TextDark
+            )
+        }
     }
 }
 
