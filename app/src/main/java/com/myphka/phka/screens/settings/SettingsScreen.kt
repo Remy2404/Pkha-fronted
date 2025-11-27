@@ -119,12 +119,53 @@ fun SettingsScreen(
             SettingsGroup {
                 SettingsLinkItem(
                     title = "Privacy Policy",
-                    onClick = { /* Navigate to Privacy Policy */ }
+                    onClick = { navController.navigate("privacy_policy") }
                 )
                 HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
                 SettingsLinkItem(
                     title = "Terms of Service",
-                    onClick = { /* Navigate to Terms of Service */ }
+                    onClick = { navController.navigate("terms_of_service") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                SettingsLinkItem(
+                    title = "Returns & Refunds",
+                    onClick = { navController.navigate("returns_refunds") }
+                )
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Support & Info
+            SettingsSectionTitle(title = "Support & Info")
+            SettingsGroup {
+                SettingsLinkItem(
+                    title = "Help & FAQ",
+                    onClick = { navController.navigate("help_faq") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                SettingsLinkItem(
+                    title = "About Us",
+                    onClick = { navController.navigate("about_us") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                SettingsLinkItem(
+                    title = "Contact Us",
+                    onClick = { navController.navigate("contact_us") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                SettingsLinkItem(
+                    title = "Social Media",
+                    onClick = { navController.navigate("social_media") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                SettingsLinkItem(
+                    title = "Send Feedback",
+                    onClick = { navController.navigate("app_feedback") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                SettingsLinkItem(
+                    title = "App Version",
+                    onClick = { navController.navigate("app_version") }
                 )
             }
 
@@ -133,6 +174,11 @@ fun SettingsScreen(
             // Data Management
             SettingsSectionTitle(title = "Data Management")
             SettingsGroup {
+                SettingsLinkItem(
+                    title = "Manage Data",
+                    onClick = { navController.navigate("data_management") }
+                )
+                HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
                 SettingsLinkItem(
                     title = "Clear Cache",
                     onClick = { viewModel.clearCache() }

@@ -122,6 +122,11 @@ fun ProfileScreen(
                 onClick = { navController.navigate("checkout_payment") }
             )
             ProfileMenuItem(
+                icon = Icons.Default.Star,
+                title = "Loyalty Program",
+                onClick = { navController.navigate("loyalty_program") }
+            )
+            ProfileMenuItem(
                 icon = Icons.Default.Tune,
                 title = "Preferences",
                 onClick = { navController.navigate("settings") }
@@ -129,12 +134,17 @@ fun ProfileScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Privacy Section
-            ProfileSectionTitle(title = "Privacy")
+            // Support & Privacy
+            ProfileSectionTitle(title = "Support & Privacy")
+            ProfileMenuItem(
+                icon = Icons.Default.SupportAgent,
+                title = "Live Chat Support",
+                onClick = { navController.navigate("live_chat") }
+            )
             ProfileMenuItem(
                 icon = Icons.Default.PrivacyTip,
                 title = "Privacy Settings",
-                onClick = { /* Navigate to Privacy Settings */ }
+                onClick = { navController.navigate("privacy_policy") }
             )
 
             Spacer(modifier = Modifier.height(32.dp))
